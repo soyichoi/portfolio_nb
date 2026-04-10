@@ -1,0 +1,50 @@
+/* ======================================================================main */
+/* ----------------------------------------------------------------------히어로 배너 */
+#wrap main {}
+#wrap main .hero_bnr {
+    width: 100%; height: calc(100vh - 115px);
+}
+#wrap main .hero_bnr .swiper-wrapper {}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide {
+    background-size: cover; background-position: top;
+}
+#wrap main .hero_bnr .swiper-wrapper .slide1 {background-image: url(../images/product/banner_01.jpg);}
+#wrap main .hero_bnr .swiper-wrapper .slide2 {background-image: url(../images/product/banner_02.jpg);}
+#wrap main .hero_bnr .swiper-wrapper .slide3 {background-image: url(../images/product/banner_03.jpg);}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide a {
+    display: block; width: 100%; height: 100%;
+}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box {
+    position: absolute; left: 80px; bottom: 100px;
+}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box h1, p {color: #fff;}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box h1 {
+    font-family: "Montserrat", sans-serif; font-size: 2.63rem; font-weight: 600; margin-bottom: 20px;
+}
+#wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box p {font-size: 1.13rem; line-height: 150%;}
+/* ----------------------------------------------------------------------히어로 배너(버튼) */
+#wrap main .hero_bnr .hero-pagination {}
+#wrap main .hero_bnr .hero-prev,
+#wrap main .hero_bnr .hero-next {
+    background-image: url(../images/common/btn_arrow.svg);
+    background-size: 80px;
+    background-position: center;
+    width: 80px; height: 80px;
+}
+#wrap main .hero_bnr .hero-prev {left: 40px; transform: translateY(-50%)}
+#wrap main .hero_bnr .hero-next {right: 40px; transform: translateY(-50%) scaleX(-1);}
+#wrap main .hero_bnr .hero-prev svg,
+#wrap main .hero_bnr .hero-next svg {display: none;}
+/* ----------------------------------------------------------------------히어로 배너(페이지번호) */
+#wrap main .hero_bnr .hero-pagination {
+    position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 16px; width: auto;
+}
+#wrap main .hero_bnr .hero-pagination .swiper-pagination-current,
+#wrap main .hero_bnr .hero-pagination .swiper-pagination-total {
+    color: #fff; font-size: 1.25rem;
+}
+#wrap main .hero_bnr .hero-pagination .custom-separator {
+    display: inline-block;
+    width: 50px; height: 1px; background-color: #fff;
+}

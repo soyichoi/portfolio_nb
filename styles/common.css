@@ -1,0 +1,34 @@
+/* ======================================================================header */
+#wrap header {}
+/* ----------------------------------------------------------------------띠배너 */
+#wrap header .notice_bnr {
+    background-color: #000; height: 44px;
+}
+#wrap header .notice_bnr .swiper-wrapper {}
+#wrap header .notice_bnr .swiper-wrapper .swiper-slide {
+    color: #fff; text-align: center; font-weight: 300;
+    line-height: 44px;
+}
+#wrap header .notice_bnr .swiper-wrapper .notice1 {}
+#wrap #wrap header .notice_bnr .swiper-wrapper .notice2 {}
+#wrap header .notice_bnr .swiper-wrapper .notice3 {}
+/* ----------------------------------------------------------------------nav */
+#wrap header nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 80px; height: 71px;
+}
+#wrap header nav h1 .logo {width: 102px; display: block;}
+#wrap header nav h1 .logo img {width: 100%;}
+#wrap header nav .gnb {display: flex; gap: 26px;}
+#wrap header nav .gnb li {}
+#wrap header nav .gnb li a {
+    display: block; line-height: 71px; width: 80px; text-align: center;
+    font-size: 1.19rem; font-weight: 500;
+}
+#wrap header nav .search_mypage {}
+#wrap header nav .search_mypage button {}
+#wrap header nav .search_mypage button img {width: 100%;}
+#wrap header nav .search_mypage .search {margin-right: 24px;}
+#wrap header nav .search_mypage .search img {}
+#wrap header nav .search_mypage .mypage {}
+#wrap header nav .search_mypage .mypage img {}
