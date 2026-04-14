@@ -84,7 +84,7 @@
     display: none; background-color: bisque; max-width: 1760px;
 }
 #wrap main .best_wrap .contents .tab_contents .swiper.active {display: block;}
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper {gap: 20px;}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img {width:100%;}

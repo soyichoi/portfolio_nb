@@ -39,12 +39,15 @@ console.log(best, best_title);
 //베스트셀러 swiper
 const topSwiper = new Swiper(best[0], {
     slidesPerView: 5,
+    spaceBetween: 20,
 })
 const bottomSwiper = new Swiper(best[1], {
     slidesPerView: 5,
+    spaceBetween: 20,
 })
 const outerSwiper = new Swiper(best[2], {
     slidesPerView: 5,
+    spaceBetween: 20,
 })
 
 //베스트셀러 탭메뉴
