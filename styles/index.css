@@ -1,6 +1,6 @@
 /* ======================================================================main */
 /* ======================================================================1. 히어로 배너 */
-#wrap main {}
+#wrap main {padding-top: 115px;}
 #wrap main .hero_bnr {
     width: 100%; height: calc(100vh - 115px);
 }
@@ -58,39 +58,86 @@
     padding-bottom: 40px;
 }
 #wrap main .best_wrap .title_box h1 {}
-#wrap main .best_wrap .title_box h1 em {
-    font-family: "Montserrat", sans-serif; font-size: 2.63rem; font-weight: 600;
-    margin-right: 25px;
-}
-#wrap main .best_wrap .title_box span {
-    line-height: 150%; color: #777; font-size: 1.13rem;
-}
+#wrap main .best_wrap .title_box h1 em {margin-right: 25px;}
+#wrap main .best_wrap .title_box span {}
 #wrap main .best_wrap .contents {}
-#wrap main .best_wrap .contents .tab_title {display: flex; justify-content: space-between; padding-bottom: 20px;}
-#wrap main .best_wrap .contents .tab_title .tab_left {display: flex; gap: 8px; align-items: center;}
-#wrap main .best_wrap .contents .tab_title .tab_left > a {
-    background-color: #eee; color: #777;
-    padding: 10px 18px; border-radius: 30px;
-    font-weight: 500; font-size: 0.94rem;
-}
-#wrap main .best_wrap .contents .tab_title .tab_left > a.active {
-    background-color: #CF0A2C; color: #fff;
-}
+#wrap main .best_wrap .contents .tab_title {display: flex; justify-content: space-between; margin-bottom: 20px;}
+#wrap main .best_wrap .contents .tab_title .tab_menu {display: flex; gap: 8px; align-items: center;}
+#wrap main .best_wrap .contents .tab_title .tab_menu > a {}
+#wrap main .best_wrap .contents .tab_title .tab_menu > a.active {}
 #wrap main .best_wrap .contents .tab_title .tab_more {}
 #wrap main .best_wrap .contents .tab_title .tab_more > a {}
 #wrap main .best_wrap .contents .tab_title .tab_more > a img {width: 100%;}
+/* ----------------------------------------------------------------------2. 베스트셀러(swiper) */
 #wrap main .best_wrap .contents .tab_contents {}
 #wrap main .best_wrap .contents .tab_contents .swiper {
-    display: none; background-color: bisque; max-width: 1760px;
+    display: none; max-width: 1760px;
+    position: relative; padding-bottom: 60px;
 }
 #wrap main .best_wrap .contents .tab_contents .swiper.active {display: block;}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide a img {width:100%;}
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide h2 {
-    font-size: 1.03rem; margin: 30px 0 20px 0;
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide h2 {}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide .price {}
+/* ----------------------------------------------------------------------2. 베스트셀러(진행바) */
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    display: flex;
 }
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide .price {
-    font-size: 0.94rem; font-weight: 600; font-size: 0.94rem;
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination-current {margin-right: 3px;}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination-total {margin-left: 3px;}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar {
+    height: 2px; background: #eee;
+    position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
+}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar-drag {
+    background: #000;
+}
+/* ======================================================================3. 롱 슬리브 */
+#wrap main .sleeve_wrap {display: flex; gap: 50px; padding-right: 80px;}
+#wrap main .sleeve_wrap .look_swiper {}
+#wrap main .sleeve_wrap .look_swiper .swiper-wrapper {}
+#wrap main .sleeve_wrap .look_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .sleeve_wrap .look_swiper .swiper-wrapper .swiper-slide img {width: 100%;}
+#wrap main .sleeve_wrap .contents_wrap {width: calc(100% - 750px);}
+#wrap main .sleeve_wrap .contents_wrap .title_box {}
+#wrap main .sleeve_wrap .contents_wrap .title_box h1 {}
+#wrap main .sleeve_wrap .contents_wrap .title_box h1 em {}
+#wrap main .sleeve_wrap .contents_wrap .title_box span {margin: 30px 0 70px 0; display: block;}
+#wrap main .sleeve_wrap .contents_wrap .more_view {}
+#wrap main .sleeve_wrap .contents_wrap .more_view img {}
+#wrap main .sleeve_wrap .contents_wrap .contents {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_menu {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_menu > a {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_menu > a.active {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_more {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_more > a {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_more > a img {width: 100%;}
+/* ----------------------------------------------------------------------3. 롱 슬리브(상품 swiper) */
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper {width: 100%; padding-bottom: 45px;}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide > a {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide > a > img {width: 100%;}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide h2 {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide .price {}
+/* ----------------------------------------------------------------------3. 롱 슬리브(진행바) */
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    display: flex;
+}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination-current {margin-right: 3px;}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination-total {margin-left: 3px;}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar {
+    height: 2px; background: #eee;
+    position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
+}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar-drag {
+    background: #000;
 }

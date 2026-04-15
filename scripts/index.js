@@ -1,6 +1,6 @@
-//히어로 배너
+//========================================================1. 히어로 배너
 const heroBnr = document.querySelector('.hero_bnr');
-console.log(heroBnr);
+//console.log(heroBnr);
 
 const heroSlide = new Swiper(heroBnr,{
     loop:true,
@@ -31,22 +31,36 @@ const heroSlide = new Swiper(heroBnr,{
     },
 })
 
-//베스트셀러
+//========================================================2. 베스트셀러
 const best = document.querySelectorAll('.best_wrap .swiper');
-const best_title = document.querySelectorAll('.best_wrap .tab_left a');
-console.log(best, best_title);
+const best_title = document.querySelectorAll('.best_wrap .tab_menu a');
+//console.log(best, best_title);
 
 //베스트셀러 swiper
 const topSwiper = new Swiper(best[0], {
     slidesPerView: 5,
+    freeMode: true,
+    freeModeMomentum: true,
     spaceBetween: 20,
-})
+    pagination: {
+        el: '.top_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.top_swiper .swiper-scrollbar',
+        draggable: true,
+    }
+});
 const bottomSwiper = new Swiper(best[1], {
     slidesPerView: 5,
+    freeMode: true,
+    freeModeMomentum: true,
     spaceBetween: 20,
 })
 const outerSwiper = new Swiper(best[2], {
     slidesPerView: 5,
+    freeMode: true,
+    freeModeMomentum: true,
     spaceBetween: 20,
 })
 
@@ -76,3 +90,27 @@ best_title.forEach(function(tab, index) {
         best[index].classList.add('active');
     });
 });
+
+//========================================================3. 롱 슬리브
+const sleeveLook = document.querySelector('.look_swiper');
+//console.log(sleeveLook);
+const sleeveLookSwiper = new Swiper(sleeveLook, {
+    loop:true,
+})
+//---------------------------------------------------------- 상품 swiper
+const sleeveList = document.querySelectorAll('.sleeve_wrap .contents_wrap .swiper');
+//console.log(sleeveList);
+const stripeSwiper = new Swiper(sleeveList[0],{
+    slidesPerView: 3,
+    freeMode: true,
+    freeModeMomentum: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.stripe_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.stripe_swiper .swiper-scrollbar',
+        draggable: true,
+    }
+})
