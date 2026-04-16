@@ -37,7 +37,21 @@ const best_title = document.querySelectorAll('.best_wrap .tab_menu a');
 //console.log(best, best_title);
 
 //베스트셀러 swiper
-const topSwiper = new Swiper(best[0], {
+const totalSwiper = new Swiper(best[0], {
+    slidesPerView: 5,
+    freeMode: true,
+    freeModeMomentum: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.total_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.total_swiper .swiper-scrollbar',
+        draggable: true,
+    }
+});
+const topSwiper = new Swiper(best[1], {
     slidesPerView: 5,
     freeMode: true,
     freeModeMomentum: true,
@@ -51,13 +65,21 @@ const topSwiper = new Swiper(best[0], {
         draggable: true,
     }
 });
-const bottomSwiper = new Swiper(best[1], {
+const bottomSwiper = new Swiper(best[2], {
     slidesPerView: 5,
     freeMode: true,
     freeModeMomentum: true,
     spaceBetween: 20,
+        pagination: {
+        el: '.top_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.top_swiper .swiper-scrollbar',
+        draggable: true,
+    }
 })
-const outerSwiper = new Swiper(best[2], {
+const outerSwiper = new Swiper(best[3], {
     slidesPerView: 5,
     freeMode: true,
     freeModeMomentum: true,
@@ -115,6 +137,67 @@ const stripeSwiper = new Swiper(sleeveList[0],{
     },
     scrollbar: {
         el: '.stripe_swiper .swiper-scrollbar',
+        draggable: true,
+    }
+})
+//========================================================5. 데일리 셋업
+const setup = document.querySelector('.setup_swiper');
+console.log(setup);
+const setupSwiper = new Swiper(setup, {
+    slidesPerView: 3,
+    freeMode: true,
+    freeModeMomentum: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.setup_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.setup_swiper .swiper-scrollbar',
+        draggable: true,
+    }
+})
+//========================================================6. 베스트 팬츠
+const pantsLook = document.querySelector('.pants_contents .look_swiper');
+console.log(pantsLook);
+const pantsLookSwiper = new Swiper(pantsLook, {
+    loop:true,
+    navigation:{
+        prevEl:'.pants_wrap .pants-prev',
+        nextEl:'.pants_wrap .pants-next',
+    },
+})
+//---------------------------------------------------------- 상품 swiper
+const pantsList = document.querySelectorAll('.pants_wrap .tab_contents .swiper');
+console.log(pantsList[0]);
+const denimSwiper = new Swiper(pantsList[0],{
+    slidesPerView: 3,
+    freeMode: true,
+    freeModeMomentum: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.denim_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.denim_swiper .swiper-scrollbar',
+        draggable: true,
+    }
+})
+//========================================================7. 러닝
+const running = document.querySelector('.run_swiper');
+console.log(running);
+const runSwiper = new Swiper(running, {
+    slidesPerView: 5,
+    freeMode: true,
+    freeModeMomentum: true,
+    spaceBetween: 20,
+    pagination: {
+        el: '.run_swiper .swiper-pagination',
+        type: 'fraction',
+    },
+    scrollbar: {
+        el: '.run_swiper .swiper-scrollbar',
         draggable: true,
     }
 })

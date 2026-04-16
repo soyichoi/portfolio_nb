@@ -7,22 +7,28 @@
     line-height: 150%; color: #777; font-size: 1.13rem;
 }
 /* ---------------------------------------------------------------------- 탭메뉴 버튼 */
-#wrap .tab_menu > a {
+#wrap main .tab_menu {display: flex; gap: 8px; align-items: center;}
+#wrap main .tab_menu > a {
     background-color: #eee; color: #777; padding: 10px 18px; border-radius: 30px;
     font-weight: 500; font-size: 0.94rem;
 }
-#wrap .tab_menu > a.active {
+#wrap main .tab_menu > a.active {
     background-color: #CF0A2C; color: #fff;
 }
 /* ---------------------------------------------------------------------- 제품명, 가격 */
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide h2,
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide h2 {
-    font-size: 1.03rem; margin: 30px 0 20px 0;
+#wrap .product_box .name {font-size: 1.03rem; margin: 30px 0 20px 0;}
+#wrap .product_box .price {font-size: 0.94rem; font-weight: 600; font-size: 0.94rem;}
+/*  ---------------------------------------------------------------------- 진행바 */
+#wrap main .swiper-pagination {
+    position: absolute; bottom: 0; left: 0; width: 100%; display: flex;
 }
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide .price,
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide .price {
-    font-size: 0.94rem; font-weight: 600; font-size: 0.94rem;
+#wrap main .swiper-pagination-current {margin-right: 3px;}
+#wrap main .swiper-pagination-total {margin-left: 3px;}
+#wrap main .swiper-scrollbar {
+    height: 2px; background: #eee;
+    position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
 }
+#wrap main .swiper-scrollbar-drag {background: #000;}
 
 /* ======================================================================header */
 #wrap header {

@@ -50,19 +50,14 @@
     width: 50px; height: 1px; background-color: #fff;
 }
 /* ======================================================================2. 베스트셀러 */
-#wrap main .best_wrap {
-    padding: 100px 80px;
-}
-#wrap main .best_wrap .title_box {
-    display: flex; flex-flow: row nowrap; align-items: end;
-    padding-bottom: 40px;
-}
+#wrap main .best_wrap {padding: 100px 80px;}
+#wrap main .best_wrap .title_box {display: flex; flex-flow: row nowrap; align-items: end; margin-bottom: 40px;}
 #wrap main .best_wrap .title_box h1 {}
 #wrap main .best_wrap .title_box h1 em {margin-right: 25px;}
 #wrap main .best_wrap .title_box span {}
 #wrap main .best_wrap .contents {}
 #wrap main .best_wrap .contents .tab_title {display: flex; justify-content: space-between; margin-bottom: 20px;}
-#wrap main .best_wrap .contents .tab_title .tab_menu {display: flex; gap: 8px; align-items: center;}
+#wrap main .best_wrap .contents .tab_title .tab_menu {}
 #wrap main .best_wrap .contents .tab_title .tab_menu > a {}
 #wrap main .best_wrap .contents .tab_title .tab_menu > a.active {}
 #wrap main .best_wrap .contents .tab_title .tab_more {}
@@ -82,19 +77,11 @@
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide h2 {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper .swiper-slide .price {}
 /* ----------------------------------------------------------------------2. 베스트셀러(진행바) */
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination {
-    position: absolute; bottom: 0; left: 0; width: 100%;
-    display: flex;
-}
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination-current {margin-right: 3px;}
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination-total {margin-left: 3px;}
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar {
-    height: 2px; background: #eee;
-    position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
-}
-#wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar-drag {
-    background: #000;
-}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination {}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination-current {}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-pagination-total {}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar {}
+#wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar-drag {}
 /* ======================================================================3. 롱 슬리브 */
 #wrap main .sleeve_wrap {display: flex; gap: 50px; padding: 0 80px 100px 0;}
 #wrap main .sleeve_wrap .look_swiper {}
@@ -112,13 +99,15 @@
 }
 #wrap main .sleeve_wrap .look_swiper .sleeve-prev {}
 #wrap main .sleeve_wrap .look_swiper .sleeve-next {transform: scaleX(-1);}
-#wrap main .sleeve_wrap .contents_wrap {width: calc(100% - 750px);}
+#wrap main .sleeve_wrap .contents_wrap {
+    width: calc(100% - 750px); display: flex; flex-flow: column nowrap; justify-content: space-between;
+}
 #wrap main .sleeve_wrap .contents_wrap .title_box {}
 #wrap main .sleeve_wrap .contents_wrap .title_box h1 {}
 #wrap main .sleeve_wrap .contents_wrap .title_box h1 em {}
 #wrap main .sleeve_wrap .contents_wrap .title_box span {margin: 30px 0 70px 0; display: block;}
-#wrap main .sleeve_wrap .contents_wrap .more_view {}
-#wrap main .sleeve_wrap .contents_wrap .more_view img {}
+#wrap main .sleeve_wrap .contents_wrap .title_box .more_view {}
+#wrap main .sleeve_wrap .contents_wrap .title_box .more_view img {}
 #wrap main .sleeve_wrap .contents_wrap .contents {}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_title {
     display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
@@ -131,7 +120,7 @@
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_more > a img {width: 100%;}
 /* ----------------------------------------------------------------------3. 롱 슬리브(상품 swiper) */
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents {}
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper {width: 100%; padding-bottom: 45px;}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper {width: 100%; padding-bottom: 50px;}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper {}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide > a {}
@@ -139,21 +128,147 @@
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide h2 {}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide .price {}
 /* ----------------------------------------------------------------------3. 롱 슬리브(진행바) */
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination {
-    position: absolute; bottom: 0; left: 0; width: 100%;
-    display: flex;
-}
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination-current {margin-right: 3px;}
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination-total {margin-left: 3px;}
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar {
-    height: 2px; background: #eee;
-    position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
-}
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar-drag {background: #000;}
-/* ======================================================================3. 롱 슬리브 */
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination-current {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-pagination-total {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar {}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar-drag {}
+/* ======================================================================4. 이벤트 배너 */
 #wrap main .event_bnr {
     background-image: url(../images/product/zanmang_loopy.jpg);
     background-size: cover;
     background-position: center;
     height: 400px; margin-bottom: 100px;
+}
+/* ======================================================================5. 데일리 셋업 */
+#wrap main .setup_wrap {padding: 0 80px 100px;}
+#wrap main .setup_wrap .title_more {display: flex; justify-content: space-between; padding-bottom: 40px;}
+#wrap main .setup_wrap .title_more .title_box {display: flex; align-items: end;}
+#wrap main .setup_wrap .title_more .title_box h1 {}
+#wrap main .setup_wrap .title_more .title_box h1 em {margin-right: 25px;}
+#wrap main .setup_wrap .title_more .title_box span {}
+#wrap main .setup_wrap .title_more .title_box .tab_more {}
+#wrap main .setup_wrap .title_more .title_box .tab_more a {}
+#wrap main .setup_wrap .title_more .title_box .tab_more a img {}
+#wrap main .setup_wrap .setup_swiper {padding-bottom: 45px;}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper {}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .setup_img {}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .setup_img img {width: 100%;}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card {
+    display: flex; gap: 20px; margin-top: 20px;
+}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card img {width: 150px;}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card {}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card h2 {margin: 30px 0 20px;}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card .price {margin-bottom: 20px;}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card .color_chip {
+    display: flex; gap: 8px;
+}
+#wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card .color_chip span {
+    width: 20px; height: 20px; border-radius: 50%;
+}
+/* ----------------------------------------------------------------------5. 데일리 셋업(진행바) */
+#wrap main .setup_wrap .setup_swiper .swiper-pagination {}
+#wrap main .setup_wrap .setup_swiper .swiper-pagination-current {}
+#wrap main .setup_wrap .setup_swiper .swiper-pagination-total {}
+#wrap main .setup_wrap .setup_swiper .swiper-scrollbar {}
+#wrap main .setup_wrap .setup_swiper .swiper-scrollbar-drag {}
+/* ======================================================================6. 베스트 팬츠 */
+#wrap main .pants_wrap {padding: 0 80px 100px;}
+#wrap main .pants_wrap .title_box {display: flex;  align-items: end; margin-bottom: 40px;}
+#wrap main .pants_wrap .title_box h1 {}
+#wrap main .pants_wrap .title_box h1 em {margin-right: 25px;}
+#wrap main .pants_wrap .title_box span {}
+#wrap main .pants_wrap .pants_contents {display: flex; gap: 50px;}
+#wrap main .pants_wrap .pants_contents .look_swiper {}
+#wrap main .pants_wrap .pants_contents .look_swiper .swiper-wrapper {}
+#wrap main .pants_wrap .pants_contents .look_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .pants_wrap .pants_contents .look_swiper .swiper-wrapper .swiper-slide img {width: 100%;}
+/* ----------------------------------------------------------------------6. 베스트 팬츠(룩북 버튼) */
+#wrap main .pants_wrap .pants-prev svg,
+#wrap main .pants_wrap .pants-next svg {display: none;}/* 기본버튼삭제 */
+#wrap main .pants_wrap .look_swiper .pants-prev,
+#wrap main .pants_wrap .look_swiper .pants-next {
+    background-image: url(../images/common/btn_arrow.svg);
+    background-size: 80px; background-position: center;
+    width: 80px; height: 80px;
+}
+#wrap main .pants_wrap .look_swiper .pants-prev {}
+#wrap main .pants_wrap .look_swiper .pants-next {transform: scaleX(-1);}
+#wrap main .pants_wrap .pants_contents .contents {width: calc(100% - 550px);}
+#wrap main .pants_wrap .pants_contents .contents .tab_title {display: flex; justify-content: space-between; margin-bottom: 40px;}
+#wrap main .pants_wrap .pants_contents .contents .tab_title .tab_menu {}
+#wrap main .pants_wrap .pants_contents .contents .tab_title .tab_menu a {}
+#wrap main .pants_wrap .pants_contents .contents .tab_title .tab_menu a.active {}
+#wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more {}
+#wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more a {}
+#wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more a img {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper {padding-bottom: 50px;}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide a {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide a > img {width: 100%;}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide .product_box {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide .product_box .name {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide .product_box .price {}
+
+/* ----------------------------------------------------------------------6. 베스트 팬츠(진행바) */
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-pagination {}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-scrollbar {}
+/* ======================================================================7. 러닝 */
+#wrap main .run_wrap {padding: 0 80px 100px;}
+#wrap main .run_wrap .title_box {display: flex; align-items: end; padding-bottom: 40px;}
+#wrap main .run_wrap .title_box h1 {}
+#wrap main .run_wrap .title_box h1 em {margin-right: 25px;}
+#wrap main .run_wrap .title_box span {}
+#wrap main .run_wrap .run_img {}
+#wrap main .run_wrap .run_img img {width: 100%;}
+#wrap main .run_wrap .run_swiper {margin-top: 30px; padding-bottom: 60px;}
+#wrap main .run_wrap .run_swiper .swiper-wrapper {}
+#wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide {}
+#wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide a {}
+#wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide a img {width: 100%;}
+#wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide .product_box {}
+#wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide .product_box .name {}
+#wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide .product_box .price {}
+/* ----------------------------------------------------------------------7. 러닝(진행바) */
+#wrap main .run_wrap .run_swiper .swiper-pagination {}
+#wrap main .run_wrap .run_swiper .swiper-pagination-current {}
+#wrap main .run_wrap .run_swiper .swiper-pagination-total {}
+#wrap main .run_wrap .run_swiper .swiper-scrollbar {}
+#wrap main .run_wrap .run_swiper .swiper-scrollbar-drag {}
+/* ======================================================================8. 콜렉션 */
+#wrap main .collection_wrap {padding: 0 80px 100px;}
+#wrap main .collection_wrap .title_more {display: flex; justify-content: space-between;}
+#wrap main .collection_wrap .title_more .title_box {display: flex; align-items: end; margin-bottom: 40px;}
+#wrap main .collection_wrap .title_more .title_box h1 {}
+#wrap main .collection_wrap .title_more .title_box h1 em {margin-right: 25px;}
+#wrap main .collection_wrap .title_more .title_box span {}
+#wrap main .collection_wrap .title_more .title_box .tab_more {}
+#wrap main .collection_wrap .title_more .title_box .tab_more a {}
+#wrap main .collection_wrap .title_more .title_box .tab_more a img {}
+#wrap main .collection_wrap .contents_box {display: flex; gap: 20px;}
+#wrap main .collection_wrap .contents_box .collection {
+    background-size: cover; background-position: center;
+    width: 100%; height: 700px;
+    position: relative;
+}
+#wrap main .collection_wrap .contents_box .collection::after {
+    content: ''; position: absolute; width: 100%; height: 100%; z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+#wrap main .collection_wrap .contents_box .collection1 {background-image: url(../images/product/collection_01.jpg);}
+#wrap main .collection_wrap .contents_box .collection2 {background-image: url(../images/product/collection_02.jpg);}
+#wrap main .collection_wrap .contents_box .collection3 {background-image: url(../images/product/collection_03.jpg);}
+#wrap main .collection_wrap .contents_box .collection .text_box {
+    position: absolute; left: 30px; bottom: 50px; z-index: 2;
+}
+#wrap main .collection_wrap .contents_box .collection .text_box h2,
+#wrap main .collection_wrap .contents_box .collection .text_box p {
+    color: #fff; font-size: 1.03rem;
+}
+#wrap main .collection_wrap .contents_box .collection .text_box h2 {
+    font-size: 1.63rem; font-weight: 600; margin-bottom: 20px;
 }
