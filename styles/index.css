@@ -35,7 +35,7 @@
 #wrap main .hero_bnr .hero-prev {left: 40px; transform: translateY(-50%)}
 #wrap main .hero_bnr .hero-next {right: 40px; transform: translateY(-50%) scaleX(-1);}
 #wrap main .hero_bnr .hero-prev svg,
-#wrap main .hero_bnr .hero-next svg {display: none;}
+#wrap main .hero_bnr .hero-next svg {display: none;}/* 기본버튼삭제 */
 /* ----------------------------------------------------------------------1. 히어로 배너(페이지번호) */
 #wrap main .hero_bnr .hero-pagination {
     position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%);
@@ -96,11 +96,22 @@
     background: #000;
 }
 /* ======================================================================3. 롱 슬리브 */
-#wrap main .sleeve_wrap {display: flex; gap: 50px; padding-right: 80px;}
+#wrap main .sleeve_wrap {display: flex; gap: 50px; padding: 0 80px 100px 0;}
 #wrap main .sleeve_wrap .look_swiper {}
 #wrap main .sleeve_wrap .look_swiper .swiper-wrapper {}
 #wrap main .sleeve_wrap .look_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .sleeve_wrap .look_swiper .swiper-wrapper .swiper-slide img {width: 100%;}
+/* ----------------------------------------------------------------------3. 롱 슬리브(룩북 버튼) */
+#wrap main .sleeve_wrap .sleeve-prev svg,
+#wrap main .sleeve_wrap .sleeve-next svg {display: none;}/* 기본버튼삭제 */
+#wrap main .sleeve_wrap .look_swiper .sleeve-prev,
+#wrap main .sleeve_wrap .look_swiper .sleeve-next {
+    background-image: url(../images/common/btn_arrow.svg);
+    background-size: 80px; background-position: center;
+    width: 80px; height: 80px;
+}
+#wrap main .sleeve_wrap .look_swiper .sleeve-prev {}
+#wrap main .sleeve_wrap .look_swiper .sleeve-next {transform: scaleX(-1);}
 #wrap main .sleeve_wrap .contents_wrap {width: calc(100% - 750px);}
 #wrap main .sleeve_wrap .contents_wrap .title_box {}
 #wrap main .sleeve_wrap .contents_wrap .title_box h1 {}
@@ -138,6 +149,11 @@
     height: 2px; background: #eee;
     position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
 }
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar-drag {
-    background: #000;
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-scrollbar-drag {background: #000;}
+/* ======================================================================3. 롱 슬리브 */
+#wrap main .event_bnr {
+    background-image: url(../images/product/zanmang_loopy.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px; margin-bottom: 100px;
 }

@@ -96,6 +96,10 @@ const sleeveLook = document.querySelector('.look_swiper');
 //console.log(sleeveLook);
 const sleeveLookSwiper = new Swiper(sleeveLook, {
     loop:true,
+    navigation:{
+        prevEl:'.sleeve_wrap .sleeve-prev',
+        nextEl:'.sleeve_wrap .sleeve-next',
+    },
 })
 //---------------------------------------------------------- 상품 swiper
 const sleeveList = document.querySelectorAll('.sleeve_wrap .contents_wrap .swiper');
