@@ -1,5 +1,18 @@
 /* ====================================================================== 공통 디자인 */
 body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
+/* ---------------------------------------------------------------------- 상품이미지 hover 효과 */
+#wrap main .img_link {
+    display: block; overflow: hidden;
+    background: #000;
+}
+#wrap main .img_link img {
+    width: 100%; display: block; transition: all 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+#wrap main .img_link:hover img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
 /* ---------------------------------------------------------------------- 타이틀 */
 #wrap .title_box h1 em {
     font-family: "Montserrat", sans-serif; font-size: 2.63rem; font-weight: 600;
@@ -61,7 +74,11 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .gnb li {}
 #wrap header nav .gnb li a {
     display: block; line-height: 71px; width: 80px; text-align: center;
-    font-size: 1.19rem; font-weight: 500;
+    font-size: 1.19rem; font-weight: 500; border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+#wrap header nav .gnb li a:hover {
+    color: #CF0A2C; border-bottom: 2px solid #CF0A2C;
 }
 #wrap header nav .search_mypage {}
 #wrap header nav .search_mypage button {}
