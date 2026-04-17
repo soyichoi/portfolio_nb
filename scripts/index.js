@@ -70,22 +70,15 @@ const bottomSwiper = new Swiper(best[2], {
     freeMode: true,
     freeModeMomentum: true,
     spaceBetween: 20,
-        pagination: {
-        el: '.top_swiper .swiper-pagination',
-        type: 'fraction',
+    pagination: {
+    el: '.bottom_swiper .swiper-pagination',
+    type: 'fraction',
     },
     scrollbar: {
-        el: '.top_swiper .swiper-scrollbar',
-        draggable: true,
+    el: '.bottom_swiper .swiper-scrollbar',
+    draggable: true,
     }
 })
-const outerSwiper = new Swiper(best[3], {
-    slidesPerView: 5,
-    freeMode: true,
-    freeModeMomentum: true,
-    spaceBetween: 20,
-})
-
 //베스트셀러 탭메뉴
 //초기 상태 (첫번째만 보이기)
 best.forEach(function(el, i){
@@ -118,6 +111,10 @@ const sleeveLook = document.querySelector('.look_swiper');
 //console.log(sleeveLook);
 const sleeveLookSwiper = new Swiper(sleeveLook, {
     loop:true,
+    autoplay:{
+        delay:3000,
+    },
+    speed:1000,
     navigation:{
         prevEl:'.sleeve_wrap .sleeve-prev',
         nextEl:'.sleeve_wrap .sleeve-next',
@@ -142,7 +139,7 @@ const stripeSwiper = new Swiper(sleeveList[0],{
 })
 //========================================================5. 데일리 셋업
 const setup = document.querySelector('.setup_swiper');
-console.log(setup);
+//console.log(setup);
 const setupSwiper = new Swiper(setup, {
     slidesPerView: 3,
     freeMode: true,
@@ -159,9 +156,13 @@ const setupSwiper = new Swiper(setup, {
 })
 //========================================================6. 베스트 팬츠
 const pantsLook = document.querySelector('.pants_contents .look_swiper');
-console.log(pantsLook);
+//console.log(pantsLook);
 const pantsLookSwiper = new Swiper(pantsLook, {
     loop:true,
+    autoplay:{
+        delay:3000,
+    },
+    speed:1000,
     navigation:{
         prevEl:'.pants_wrap .pants-prev',
         nextEl:'.pants_wrap .pants-next',
@@ -169,7 +170,7 @@ const pantsLookSwiper = new Swiper(pantsLook, {
 })
 //---------------------------------------------------------- 상품 swiper
 const pantsList = document.querySelectorAll('.pants_wrap .tab_contents .swiper');
-console.log(pantsList[0]);
+//console.log(pantsList[0]);
 const denimSwiper = new Swiper(pantsList[0],{
     slidesPerView: 3,
     freeMode: true,
@@ -186,7 +187,7 @@ const denimSwiper = new Swiper(pantsList[0],{
 })
 //========================================================7. 러닝
 const running = document.querySelector('.run_swiper');
-console.log(running);
+//console.log(running);
 const runSwiper = new Swiper(running, {
     slidesPerView: 5,
     freeMode: true,

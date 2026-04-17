@@ -1,7 +1,7 @@
 //header
 //띠 배너
 const noticeBnr = document.querySelector('.notice_bnr');
-console.log(noticeBnr);
+//console.log(noticeBnr);
 
 const noticeSlide = new Swiper(noticeBnr,{
     loop:true,
@@ -11,4 +11,12 @@ const noticeSlide = new Swiper(noticeBnr,{
         delay: 2500,
     },
     speed: 500,
+})
+
+//위로가기 버튼
+const toTop = document.querySelector('.to_top');
+//console.log(toTop);
+toTop.addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo(0,0);
 })

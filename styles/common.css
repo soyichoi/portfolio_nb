@@ -1,4 +1,5 @@
 /* ====================================================================== 공통 디자인 */
+body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 /* ---------------------------------------------------------------------- 타이틀 */
 #wrap .title_box h1 em {
     font-family: "Montserrat", sans-serif; font-size: 2.63rem; font-weight: 600;
@@ -15,6 +16,9 @@
 #wrap main .tab_menu > a.active {
     background-color: #CF0A2C; color: #fff;
 }
+/* ---------------------------------------------------------------------- + 버튼 */
+#wrap main .tab_more > a img {width: 100%; transition: transform 0.3s ease;}
+#wrap main .tab_more > a:hover img {transform: rotate(90deg)}
 /* ---------------------------------------------------------------------- 제품명, 가격 */
 #wrap .product_box .name {font-size: 1.03rem; margin: 30px 0 20px 0;}
 #wrap .product_box .price {font-size: 0.94rem; font-weight: 600; font-size: 0.94rem;}
@@ -29,7 +33,6 @@
     position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
 }
 #wrap main .swiper-scrollbar-drag {background: #000;}
-
 /* ======================================================================header */
 #wrap header {
     position: fixed; left: 0; top: 0; width: 100%; z-index: 999; background: #fff;
@@ -67,3 +70,76 @@
 #wrap header nav .search_mypage .search img {}
 #wrap header nav .search_mypage .mypage {}
 #wrap header nav .search_mypage .mypage img {}
+/* ======================================================================위로가기 버튼 */
+#wrap main .to_top {
+    position: fixed; right: 80px; bottom: 50px; z-index: 999;
+}
+#wrap main .to_top img {}
+/* ======================================================================CTA 버튼 */
+#wrap main .cta_wrap {padding-bottom: 100px;}
+#wrap main .cta_wrap .cta_list {
+    display: grid;
+    grid-template-columns: repeat(4, max-content); justify-content: center;
+    gap: 110px;
+}
+#wrap main .cta_wrap .cta_list .cta_item {text-align: center;}
+#wrap main .cta_wrap .cta_list .cta_item a {}
+#wrap main .cta_wrap .cta_list .cta_item a img {width: 48px;}
+#wrap main .cta_wrap .cta_list .cta_item a h1 {
+    margin: 16px 0;
+    font-family: "Montserrat", sans-serif; font-size: 1.13rem; font-weight: 600;
+}
+#wrap main .cta_wrap .cta_list .cta_item p {
+    line-height: 1.5; font-size: 0.88rem; font-weight: 500; color: #777;
+}
+/* ======================================================================footer */
+/* ----------------------------------------------------------------------foot_left */
+#wrap footer {
+    background: #000; padding: 50px 0; display: flex; gap: 100px;
+    justify-content: center;
+}
+#wrap footer .foot_left {}
+#wrap footer .foot_left .foot_logo {width: 120px;}
+#wrap footer .foot_left .foot_logo img {width: 100%;}
+#wrap footer .foot_left .foot_cs {margin: 20px 0 40px;}
+#wrap footer .foot_left .foot_cs > p {
+    color: #fff; font-size: 0.94rem; line-height: 2;
+}
+#wrap footer .foot_left .foot_policy {}
+#wrap footer .foot_left .foot_policy .foot_policy_list {display: flex; gap: 12px;}
+#wrap footer .foot_left .foot_policy .foot_policy_list li {}
+#wrap footer .foot_left .foot_policy .foot_policy_list li > a {
+    color: #fff; font-size: 0.88rem; line-height: 2; font-weight: 500;
+}
+#wrap footer .foot_left .foot_policy .copyright {color: #bdbdbd; font-size: 0.88rem; line-height: 2;}
+/* ----------------------------------------------------------------------foot_center */
+#wrap footer .foot_center {display: flex; flex-flow: column nowrap; justify-content: space-between;}
+#wrap footer .foot_center .foot_menu {display: flex; gap: 50px;}
+#wrap footer .foot_center .foot_menu dl {}
+#wrap footer .foot_center .foot_menu dl dt {
+    color: #fff; font-size: 0.94rem; margin-bottom: 30px; line-height: 2;
+}
+#wrap footer .foot_center .foot_menu dl dd {}
+#wrap footer .foot_center .foot_menu dl dd > a {
+    color: #bdbdbd; font-size: 0.94rem; line-height: 2;
+}
+#wrap footer .foot_center .sns {display: flex;}
+#wrap footer .foot_center .sns > a {display: block; width: 38px;}
+#wrap footer .foot_center .sns > a img {width: 100%;}
+/* ----------------------------------------------------------------------foot_right */
+#wrap footer .foot_right {display: flex; flex-flow: column nowrap; justify-content: space-between;}
+#wrap footer .foot_right * p {color: #bdbdbd; line-height: 2; font-size: 0.88rem;}
+#wrap footer .foot_right .foot_company {}
+#wrap footer .foot_right .foot_company .company_row {display: flex;}
+#wrap footer .foot_right .foot_company .company_row > p {}
+#wrap footer .foot_right .foot_company .company_row p:first-child::after {
+    content: ''; display: inline-block; width: 1px; height: 11px; background-color: #bdbdbd;
+    margin: 0 6px;
+}
+#wrap footer .foot_right .foot_company .company_row > p a {color: #fff; font-weight: 600; margin-left: 6px;}
+#wrap footer .foot_right .foot_company .company_row address {color: #bdbdbd; line-height: 2; font-size: 0.88rem;}
+#wrap footer .foot_right .foot_cert {display: flex; gap: 14px;}
+#wrap footer .foot_right .foot_cert .cert_img {display: flex; gap: 14px;}
+#wrap footer .foot_right .foot_cert .cert_img img {width: 100%;}
+#wrap footer .foot_right .foot_cert .cert_text {}
+#wrap footer .foot_right .foot_cert .cert_text > p {color: #bdbdbd;}
