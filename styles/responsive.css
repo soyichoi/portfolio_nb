@@ -36,6 +36,7 @@
     #wrap main .pants_wrap {padding: 0 40px 80px;}
     #wrap main .pants_wrap .pants_contents {flex-flow: column nowrap;}
     #wrap main .pants_wrap .pants_contents .look_swiper {width: 100%;}
+    #wrap main .pants_wrap .pants_contents .contents {width: 100%;}
 }
 
 
@@ -89,4 +90,7 @@
     #wrap main .setup_wrap {padding: 0 20px 60px;}
     #wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card img {width: 100px; height: 100px;}
     #wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card h2 {margin: 0 0 20px;}
+    /* ----------------------------------------------- 6. 베스트 팬츠 */
+    #wrap main .pants_wrap {padding: 0 20px 60px;}
+    #wrap main .pants_wrap .pants_contents .look_swiper {width: 100%;}
 }

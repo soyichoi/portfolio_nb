@@ -207,6 +207,14 @@ const denimSwiper = new Swiper(pantsList[0],{
     scrollbar: {
         el: '.denim_swiper .swiper-scrollbar',
         draggable: true,
+    },
+    breakpoints: {
+    //모바일 (~440)
+    0: {slidesPerView: 1.2,},
+    //태블릿 (~1024)
+    440: {slidesPerView:3,},
+    //PC
+    1025: {slidesPerView:3,}
     }
 })
 //========================================================7. 러닝
