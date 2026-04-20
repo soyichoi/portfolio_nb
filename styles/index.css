@@ -185,7 +185,7 @@
 #wrap main .setup_wrap .setup_swiper .swiper-scrollbar-drag {}
 /* ======================================================================6. 베스트 팬츠 */
 #wrap main .pants_wrap {padding: 0 80px 100px;}
-#wrap main .pants_wrap .title_box {display: flex;  align-items: end; margin-bottom: 40px;}
+#wrap main .pants_wrap .title_box {display: flex; flex-flow: row nowrap; align-items: end; margin-bottom: 40px;}
 #wrap main .pants_wrap .title_box h1 {}
 #wrap main .pants_wrap .title_box h1 em {margin-right: 25px;}
 #wrap main .pants_wrap .title_box span {}
@@ -205,6 +205,7 @@
 }
 #wrap main .pants_wrap .look_swiper .pants-prev {}
 #wrap main .pants_wrap .look_swiper .pants-next {transform: scaleX(-1);}
+#wrap main .pants_wrap .pants_contents .title_clone {display: none;}/* 클론 초기 숨기기 */
 #wrap main .pants_wrap .pants_contents .contents {width: calc(100% - 550px);}
 #wrap main .pants_wrap .pants_contents .contents .tab_title {display: flex; justify-content: space-between; margin-bottom: 40px;}
 #wrap main .pants_wrap .pants_contents .contents .tab_title .tab_menu {}
@@ -228,10 +229,14 @@
 #wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-scrollbar {}
 /* ======================================================================7. 러닝 */
 #wrap main .run_wrap {padding: 0 80px 100px;}
-#wrap main .run_wrap .title_box {display: flex; align-items: end; padding-bottom: 40px;}
-#wrap main .run_wrap .title_box h1 {}
-#wrap main .run_wrap .title_box h1 em {margin-right: 25px;}
-#wrap main .run_wrap .title_box span {}
+#wrap main .run_wrap .title_more {display: flex;  justify-content: space-between;}
+#wrap main .run_wrap .title_more .title_box {display: flex; align-items: end; margin-bottom: 40px;}
+#wrap main .run_wrap .title_more .title_box h1 {}
+#wrap main .run_wrap .title_more .title_box h1 em {margin-right: 25px;}
+#wrap main .run_wrap .title_more .title_box span {}
+#wrap main .run_wrap .tab_more {}
+#wrap main .run_wrap .tab_more a {}
+#wrap main .run_wrap .tab_more a img {}
 #wrap main .run_wrap .run_img {}
 #wrap main .run_wrap .run_img img {width: 100%;}
 #wrap main .run_wrap .run_swiper {margin-top: 30px; padding-bottom: 60px;}
@@ -258,7 +263,7 @@
 #wrap main .collection_wrap .title_more .title_box .tab_more {}
 #wrap main .collection_wrap .title_more .title_box .tab_more a {}
 #wrap main .collection_wrap .title_more .title_box .tab_more a img {}
-#wrap main .collection_wrap .contents_box {display: flex; gap: 20px;}
+#wrap main .collection_wrap .contents_box {display: flex; flex-flow: row nowrap; gap: 20px;}
 #wrap main .collection_wrap .contents_box .collection {
     position: relative; overflow: hidden;
 }

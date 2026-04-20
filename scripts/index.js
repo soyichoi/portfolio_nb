@@ -150,7 +150,7 @@ const stripeSwiper = new Swiper(sleeveList[0],{
     //태블릿 (~1024)
     440: {slidesPerView:3,},
     //PC
-    1025: {slidesPerView:5,}
+    1025: {slidesPerView:3,}
     }
 })
 //========================================================5. 데일리 셋업
@@ -217,6 +217,14 @@ const denimSwiper = new Swiper(pantsList[0],{
     1025: {slidesPerView:3,}
     }
 })
+//---------------------------------------------------------- 타이틀 clone
+const pantsTitle = document.querySelector('.pants_wrap .title_box');
+const pantsClone = document.querySelector('.pants_wrap .title_clone');
+console.log(pantsTitle, pantsClone);
+
+const pantsTitleClone = pantsTitle.cloneNode(true);
+pantsClone.appendChild(pantsTitleClone);
+
 //========================================================7. 러닝
 const running = document.querySelector('.run_swiper');
 //console.log(running);
@@ -232,5 +240,13 @@ const runSwiper = new Swiper(running, {
     scrollbar: {
         el: '.run_swiper .swiper-scrollbar',
         draggable: true,
-    }
+    },
+    breakpoints: {
+    //모바일 (~440)
+    0: {slidesPerView: 1.5,},
+    //태블릿 (~1024)
+    440: {slidesPerView:3,},
+    //PC
+    1025: {slidesPerView:5,},
+    },
 })

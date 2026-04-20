@@ -34,11 +34,18 @@
     #wrap main .setup_wrap {padding: 0 40px 80px;}
     /* ----------------------------------------------- 6. 베스트 팬츠 */
     #wrap main .pants_wrap {padding: 0 40px 80px;}
-    #wrap main .pants_wrap .pants_contents {flex-flow: column nowrap;}
+    #wrap main .pants_wrap .pants_contents {flex-flow: column nowrap; gap: 0;}
     #wrap main .pants_wrap .pants_contents .look_swiper {width: 100%;}
+    #wrap main .pants_wrap .pants_contents .title_clone {display: block;}/* 타이틀 클론 보이기 */
     #wrap main .pants_wrap .pants_contents .contents {width: 100%;}
+    #wrap main .pants_wrap > .title_box {display: none;}/* 초기 상단 타이틀 숨기기 */
+    #wrap main .pants_wrap .title_box {flex-flow: column nowrap; align-items: start; margin: 50px 0 0 0;}
+    #wrap main .pants_wrap .title_box span {margin: 30px 0 70px;}
+    /* ----------------------------------------------- 7. 러닝 */
+    #wrap main .run_wrap {padding: 0 40px 80px;}
+    /* ----------------------------------------------- 8. 콜렉션 */
+    #wrap main .collection_wrap {padding: 0 40px 80px;}
 }
-
 
 
 /* ===================================================== 모바일 (~440px) */
@@ -93,4 +100,13 @@
     /* ----------------------------------------------- 6. 베스트 팬츠 */
     #wrap main .pants_wrap {padding: 0 20px 60px;}
     #wrap main .pants_wrap .pants_contents .look_swiper {width: 100%;}
+    #wrap main .pants_wrap .title_box {margin: 30px 0;}
+    #wrap main .pants_wrap .pants_contents .contents {position: relative;}
+    #wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more {position: absolute; right: 20px; top: -60px;}
+    /* ----------------------------------------------- 7. 러닝 */
+    #wrap main .run_wrap {padding: 0 20px 60px; position: relative;}
+    #wrap main .run_wrap .title_more .title_box {margin-bottom: 30px;}
+    #wrap main .run_wrap .run_swiper {margin-top: 20px;}
+    /* ----------------------------------------------- 8. 콜렉션 */
+    #wrap main .collection_wrap {padding: 0 20px 60px;}
 }
