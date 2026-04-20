@@ -33,7 +33,7 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap main .tab_more > a img {width: 100%; transition: transform 0.3s ease;}
 #wrap main .tab_more > a:hover img {transform: rotate(90deg)}
 /* ---------------------------------------------------------------------- 제품명, 가격 */
-#wrap .product_box .name {font-size: 1.03rem; margin: 30px 0 20px 0;}
+#wrap .product_box .name {font-size: 1.03rem; margin: 30px 0 20px 0; line-height: 1.5;}
 #wrap .product_box .price {font-size: 0.94rem; font-weight: 600; font-size: 0.94rem;}
 /*  ---------------------------------------------------------------------- 진행바 */
 #wrap main .swiper-pagination {
@@ -54,7 +54,13 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 /* ----------------------------------------------------------------------띠배너 */
 #wrap header .notice_bnr {
     background-color: #000; height: 44px;
+    position: relative;
 }
+#wrap header .notice_bnr .close_btn {
+    position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
+    width: 24px; height: 24px; z-index: 999;
+}
+#wrap header .notice_bnr .close_btn img {width: 100%;}
 #wrap header .notice_bnr .swiper-wrapper {}
 #wrap header .notice_bnr .swiper-wrapper .swiper-slide {
     color: #fff; text-align: center; font-weight: 300;
@@ -68,6 +74,9 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
     display: flex; justify-content: space-between; align-items: center;
     padding: 0 80px; height: 71px;
 }
+#wrap header nav .menu_btn {display: none;}
+#wrap header nav .menu_btn img {}
+#wrap header nav h1 {}
 #wrap header nav h1 .logo {width: 102px; display: block;}
 #wrap header nav h1 .logo img {width: 100%;}
 #wrap header nav .gnb {display: flex; gap: 26px;}
@@ -80,10 +89,10 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .gnb li a:hover {
     color: #CF0A2C; border-bottom: 2px solid #CF0A2C;
 }
-#wrap header nav .search_mypage {}
-#wrap header nav .search_mypage button {}
-#wrap header nav .search_mypage button img {width: 100%;}
-#wrap header nav .search_mypage .search {margin-right: 24px;}
+#wrap header nav .search_mypage {display: flex; gap: 10px;}
+#wrap header nav .search_mypage button {width: 40px; height: 40px;}
+#wrap header nav .search_mypage button img {width: 28px;}
+#wrap header nav .search_mypage .search {}
 #wrap header nav .search_mypage .search img {}
 #wrap header nav .search_mypage .mypage {}
 #wrap header nav .search_mypage .mypage img {}

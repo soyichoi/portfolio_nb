@@ -49,6 +49,14 @@ const totalSwiper = new Swiper(best[0], {
     scrollbar: {
         el: '.total_swiper .swiper-scrollbar',
         draggable: true,
+    },
+    breakpoints: {
+        //모바일 (~440)
+        0: {slidesPerView: 1.5,},
+        //태블릿 (~1024)
+        440: {slidesPerView:3,},
+        //PC
+        1025: {slidesPerView:5,}
     }
 });
 const topSwiper = new Swiper(best[1], {
@@ -135,6 +143,14 @@ const stripeSwiper = new Swiper(sleeveList[0],{
     scrollbar: {
         el: '.stripe_swiper .swiper-scrollbar',
         draggable: true,
+    },
+    breakpoints: {
+    //모바일 (~440)
+    0: {slidesPerView: 1.5,},
+    //태블릿 (~1024)
+    440: {slidesPerView:3,},
+    //PC
+    1025: {slidesPerView:5,}
     }
 })
 //========================================================5. 데일리 셋업
@@ -152,6 +168,14 @@ const setupSwiper = new Swiper(setup, {
     scrollbar: {
         el: '.setup_swiper .swiper-scrollbar',
         draggable: true,
+    },
+    breakpoints: {
+    //모바일 (~440)
+    0: {slidesPerView: 1.2,},
+    //태블릿 (~1024)
+    440: {slidesPerView:2,},
+    //PC
+    1025: {slidesPerView:3,}
     }
 })
 //========================================================6. 베스트 팬츠

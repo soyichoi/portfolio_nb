@@ -84,7 +84,7 @@
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar {}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-scrollbar-drag {}
 /* ======================================================================3. 롱 슬리브 */
-#wrap main .sleeve_wrap {display: flex; gap: 50px; padding: 0 80px 100px 0;}
+#wrap main .sleeve_wrap {display: flex; flex-flow: row nowrap; gap: 50px; padding: 0 80px 100px 0;}
 #wrap main .sleeve_wrap .look_swiper {}
 #wrap main .sleeve_wrap .look_swiper .swiper-wrapper {}
 #wrap main .sleeve_wrap .look_swiper .swiper-wrapper .swiper-slide {}
@@ -189,7 +189,7 @@
 #wrap main .pants_wrap .title_box h1 {}
 #wrap main .pants_wrap .title_box h1 em {margin-right: 25px;}
 #wrap main .pants_wrap .title_box span {}
-#wrap main .pants_wrap .pants_contents {display: flex; gap: 50px;}
+#wrap main .pants_wrap .pants_contents {display: flex; flex-flow: row nowrap; gap: 50px;}
 #wrap main .pants_wrap .pants_contents .look_swiper {}
 #wrap main .pants_wrap .pants_contents .look_swiper .swiper-wrapper {}
 #wrap main .pants_wrap .pants_contents .look_swiper .swiper-wrapper .swiper-slide {}

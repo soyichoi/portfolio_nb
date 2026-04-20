@@ -1,0 +1,92 @@
+/* 반응형 responsive */
+/* desktop(1025px~) -> tablet(~1024px) -> mobile(~440px) */
+#wrap > * {min-width: 440px;}
+/* ===================================================== 태블릿 (~1024px) */
+@media screen and (max-width: 1024px) {
+    /* ============================================== 공통디자인 */
+    #wrap .title_box h1 em {font-family: "Montserrat", sans-serif; font-size: 2.38rem; font-weight: 600;}/* 타이틀 */
+    /* ----------------------------------------------- header */
+    #wrap header .notice_bnr .close_btn {right: 40px;}
+    #wrap header nav {padding:0 40px; height: 52px;}
+    #wrap header nav .menu_btn {display: block; padding: 10px;}
+    #wrap header nav .menu_btn img {width: 28px;}
+    #wrap header nav .gnb {display: none;}
+    /* ----------------------------------------------- main */
+    #wrap main {padding-top: 92px;}
+    /* ----------------------------------------------- 1. 히어로 배너 */
+    #wrap main .hero_bnr {height: 560px;}
+    #wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box {left: 40px; bottom: 50px;}
+    #wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box h1 {font-size: 2.38rem;}
+    #wrap main .hero_bnr .hero-pagination {bottom: 25px;}
+    #wrap main .hero_bnr .hero-pagination .swiper-pagination-current,
+    #wrap main .hero_bnr .hero-pagination .swiper-pagination-total {font-size: 1.13rem;}
+    #wrap main .hero_bnr .hero-prev {left: 20px;}
+    #wrap main .hero_bnr .hero-next {right: 20px;}
+    /* ----------------------------------------------- 2. 베스트셀러 */
+    #wrap main .best_wrap {padding: 80px 40px;}
+    /* ----------------------------------------------- 3. 롱슬리브 */
+    #wrap main .sleeve_wrap {flex-flow: column nowrap; padding: 0 40px 80px;}
+    #wrap main .sleeve_wrap .look_swiper {width: 100%; gap: 0;}
+    #wrap main .sleeve_wrap .contents_wrap {width: 100%; gap: 30px;}
+    #wrap main .sleeve_wrap .contents_wrap .title_box span {display: none;}
+    #wrap main .sleeve_wrap .contents_wrap .title_box .more_view {display: none;}
+    /* ----------------------------------------------- 5. 데일리 셋업 */
+    #wrap main .setup_wrap {padding: 0 40px 80px;}
+    /* ----------------------------------------------- 6. 베스트 팬츠 */
+    #wrap main .pants_wrap {padding: 0 40px 80px;}
+    #wrap main .pants_wrap .pants_contents {flex-flow: column nowrap;}
+    #wrap main .pants_wrap .pants_contents .look_swiper {width: 100%;}
+}
+
+
+
+/* ===================================================== 모바일 (~440px) */
+@media screen and (max-width: 440px) {
+    /* ============================================== 공통디자인 */
+    #wrap .title_box h1 em {font-size: 1.88rem;}/* 타이틀 */
+    #wrap .title_box span {display: none;}/* 타이틀-설명 */
+    #wrap main .tab_menu > a {font-size: 0.81rem;}/* 탭메뉴 */
+    #wrap main .tab_more > a img {width: 24px;}/* +버튼 */
+    #wrap .product_box .name {margin: 20px 0 10px 0;}/* 제품명 */
+    #wrap main .swiper-pagination-current,/* 페이지 현재/총 */
+    #wrap main .swiper-pagination-total {font-size: 0.88rem;}
+    /* ---------------------------------------------------------------------- 제품명, 가격 */
+    #wrap .product_box .name {font-size: 0.94rem;}
+    #wrap .product_box .price {font-size: 0.88rem;}
+    /* -----------------------------------------------header */
+    #wrap header .notice_bnr {display: none;}
+    #wrap header nav {position: relative;}
+    #wrap header nav h1 .logo {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 84px;}
+    #wrap header nav {padding:0 20px; height: 60px;}
+    #wrap header nav .menu_btn img {width: 24px;}
+    #wrap header nav .search_mypage {gap: 0;}
+    #wrap header nav .search_mypage button {width: 48px; height: 48px;}
+    #wrap header nav .search_mypage button img {width: 24px;}
+    /* ----------------------------------------------- main */
+    #wrap main {padding-top: 60px;}
+    /* ----------------------------------------------- 1. 히어로 배너 */
+    #wrap main .hero_bnr {height: 410px;}
+    #wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box {left: 20px; bottom: 60px;}
+    #wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box h1 {font-size: 1.88rem; margin-bottom: 15px;}
+    #wrap main .hero_bnr .swiper-wrapper .swiper-slide a .text_box > p {font-size: 1rem;}
+    #wrap main .hero_bnr .hero-pagination {bottom: 15px;}
+    #wrap main .hero_bnr .hero-pagination .swiper-pagination-current,
+    #wrap main .hero_bnr .hero-pagination .swiper-pagination-total {font-size: 1rem;}
+    #wrap main .hero_bnr .hero-prev {left: 0px;}
+    #wrap main .hero_bnr .hero-next {right: 0px;}
+    /* ----------------------------------------------- 2. 베스트셀러 */
+    #wrap main .best_wrap {padding: 60px 0; position: relative;}
+    #wrap main .best_wrap .title_box {padding: 0 20px; margin-bottom: 30px;}
+    #wrap main .best_wrap .contents .tab_title {padding: 0 20px;}
+    #wrap main .best_wrap .contents .tab_title .tab_more {position: absolute; right: 20px; top:60px;}
+    #wrap main .best_wrap .contents .tab_contents {padding-left: 20px;}
+    /* ----------------------------------------------- 3. 롱슬리브 */
+    #wrap main .sleeve_wrap {flex-flow: column nowrap; padding: 0 20px 60px;}
+    #wrap main .sleeve_wrap .look_swiper {width: 100%;}
+    #wrap main .sleeve_wrap .contents_wrap {position: relative;}
+    #wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_more {position: absolute; right: 20px; top: 0;}
+    /* ----------------------------------------------- 5. 데일리 셋업 */
+    #wrap main .setup_wrap {padding: 0 20px 60px;}
+    #wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card img {width: 100px; height: 100px;}
+    #wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .product_card h2 {margin: 0 0 20px;}
+}
