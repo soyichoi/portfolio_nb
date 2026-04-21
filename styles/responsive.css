@@ -4,6 +4,9 @@
 @media screen and (max-width: 1024px) {
     /* ============================================== 공통디자인 */
     #wrap .title_box h1 em {font-family: "Montserrat", sans-serif; font-size: 2.38rem; font-weight: 600;}/* 타이틀 */
+    #wrap main .cta_wrap {padding-bottom: 80px;}/* CTA */
+    #wrap main .cta_wrap .cta_list {gap: 60px;}
+    #wrap main .cta_wrap .cta_list .cta_item a h1 {font-size: 1.13rem;}
     /* ----------------------------------------------- header */
     #wrap header .notice_bnr .close_btn {right: 40px;}
     #wrap header nav {padding:0 40px; height: 52px;}
@@ -46,8 +49,8 @@
     #wrap main .run_wrap {padding: 0 40px 80px;}
     /* ----------------------------------------------- 8. 콜렉션 */
     #wrap main .collection_wrap {padding: 0 40px 80px;}
+    /* ----------------------------------------------- footer */
 }
-
 
 /* ===================================================== 모바일 (~440px) */
 @media screen and (max-width: 440px) {
@@ -58,11 +61,15 @@
     #wrap main .tab_menu > a {font-size: 0.81rem;}/* 탭메뉴 */
     #wrap main .tab_more > a img {width: 24px;}/* +버튼 */
     #wrap .product_box .name {margin: 20px 0 10px 0;}/* 제품명 */
-    #wrap main .swiper-pagination-current,/* 페이지 현재/총 */
+    #wrap main .swiper-pagination-current,/* 페이지 현재-총 */
     #wrap main .swiper-pagination-total {font-size: 0.88rem;}
-    /* ---------------------------------------------------------------------- 제품명, 가격 */
-    #wrap .product_box .name {font-size: 0.94rem;}
-    #wrap .product_box .price {font-size: 0.88rem;}
+    #wrap .product_box .name {font-size: 0.94rem;}/* 제품명 */
+    #wrap .product_box .price {font-size: 0.88rem;}/* 가격 */
+    #wrap main .cta_wrap {padding-bottom: 60px;}/* CTA */
+    #wrap main .cta_wrap .cta_list {grid-template-columns: repeat(2, max-content); gap: 30px;}
+    #wrap main .cta_wrap .cta_list .cta_item a h1 {font-size: 1rem; margin: 12px 0;}
+    #wrap main .cta_wrap .cta_list .cta_item p {display: none;}
+    #wrap main .cta_wrap .cta_list .cta_item a img {width: 36px;}
     /* -----------------------------------------------header */
     #wrap header .notice_bnr {display: none;}
     #wrap header nav {position: relative;}
@@ -112,11 +119,13 @@
     #wrap main .pants_wrap .pants_contents .contents {position: relative; padding-left: 20px;}
     #wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more {position: absolute; right: 20px; top: -60px;}
     /* ----------------------------------------------- 7. 러닝 */
-    #wrap main .run_wrap {padding: 0 20px 60px; position: relative;}
+    #wrap main .run_wrap {padding: 0 0 60px 20px; position: relative;}
+    #wrap main .run_wrap .title_more {padding-right: 20px;}
     #wrap main .run_wrap .title_more .title_box {margin-bottom: 30px;}
     #wrap main .run_wrap .title_more .title_box h1 em {margin: 0;}
     #wrap main .run_wrap .run_swiper {margin-top: 20px;}
     /* ----------------------------------------------- 8. 콜렉션 */
     #wrap main .collection_wrap {padding: 0 20px 60px;}
     #wrap main .collection_wrap .title_more .title_box h1 em {margin: 0;}
+    /* ----------------------------------------------- footer */
 }

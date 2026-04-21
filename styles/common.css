@@ -117,7 +117,7 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap main .cta_wrap .cta_list .cta_item a img {width: 48px;}
 #wrap main .cta_wrap .cta_list .cta_item a h1 {
     margin: 16px 0;
-    font-family: "Montserrat", sans-serif; font-size: 1.13rem; font-weight: 600;
+    font-family: "Montserrat", sans-serif; font-size: 1.25rem; font-weight: 600;
 }
 #wrap main .cta_wrap .cta_list .cta_item p {
     line-height: 1.5; font-size: 0.88rem; font-weight: 500; color: #777;
