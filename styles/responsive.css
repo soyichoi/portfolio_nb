@@ -49,6 +49,7 @@
     #wrap main .run_wrap {padding: 0 40px 80px;}
     /* ----------------------------------------------- 8. 콜렉션 */
     #wrap main .collection_wrap {padding: 0 40px 80px;}
+    #wrap main .collection_wrap .contents_box .collection:nth-child(3) {display: none;}
     /* ----------------------------------------------- footer */
 }
 
@@ -67,7 +68,7 @@
     #wrap .product_box .price {font-size: 0.88rem;}/* 가격 */
     #wrap main .cta_wrap {padding-bottom: 60px;}/* CTA */
     #wrap main .cta_wrap .cta_list {grid-template-columns: repeat(2, max-content); gap: 30px;}
-    #wrap main .cta_wrap .cta_list .cta_item a h1 {font-size: 1rem; margin: 12px 0;}
+    #wrap main .cta_wrap .cta_list .cta_item a h1 {font-size: 0.88rem; margin: 12px 0;}
     #wrap main .cta_wrap .cta_list .cta_item p {display: none;}
     #wrap main .cta_wrap .cta_list .cta_item a img {width: 36px;}
     /* -----------------------------------------------header */
@@ -117,15 +118,21 @@
     #wrap main .pants_wrap .title_box h1 em {margin: 0;}
     #wrap main .pants_wrap .pants_contents .look_swiper {width: 100%;}
     #wrap main .pants_wrap .pants_contents .contents {position: relative; padding-left: 20px;}
+    #wrap main .pants_wrap .pants_contents .contents .tab_title {margin-bottom: 20px;}
     #wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more {position: absolute; right: 20px; top: -60px;}
     /* ----------------------------------------------- 7. 러닝 */
     #wrap main .run_wrap {padding: 0 0 60px 20px; position: relative;}
     #wrap main .run_wrap .title_more {padding-right: 20px;}
     #wrap main .run_wrap .title_more .title_box {margin-bottom: 30px;}
     #wrap main .run_wrap .title_more .title_box h1 em {margin: 0;}
+    #wrap main .run_wrap .run_img {padding-right: 20px;}
     #wrap main .run_wrap .run_swiper {margin-top: 20px;}
     /* ----------------------------------------------- 8. 콜렉션 */
     #wrap main .collection_wrap {padding: 0 20px 60px;}
+    #wrap main .collection_wrap .title_more .title_box {margin-bottom: 30px;}
+    #wrap main .collection_wrap .contents_box .collection:nth-child(2) {display: none;}
     #wrap main .collection_wrap .title_more .title_box h1 em {margin: 0;}
+    #wrap main .collection_wrap .contents_box .collection .text_box h2 {font-size: 1.38rem;}
+    #wrap main .collection_wrap .contents_box .collection .text_box p {font-size: 0.94rem;}
     /* ----------------------------------------------- footer */
 }

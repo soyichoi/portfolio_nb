@@ -237,7 +237,7 @@
 #wrap main .run_wrap .tab_more {}
 #wrap main .run_wrap .tab_more a {}
 #wrap main .run_wrap .tab_more a img {}
-#wrap main .run_wrap .run_img {}
+#wrap main .run_wrap .run_img {display: block;}
 #wrap main .run_wrap .run_img img {width: 100%;}
 #wrap main .run_wrap .run_swiper {margin-top: 30px; padding-bottom: 60px;}
 #wrap main .run_wrap .run_swiper .swiper-wrapper {}
@@ -265,22 +265,20 @@
 #wrap main .collection_wrap .title_more .title_box .tab_more a img {}
 #wrap main .collection_wrap .contents_box {display: flex; flex-flow: row nowrap; gap: 20px;}
 #wrap main .collection_wrap .contents_box .collection {
-    position: relative; overflow: hidden;
+    position: relative; overflow: hidden; display: block;
 }
 #wrap main .collection_wrap .contents_box .collection::after {
-    content: ''; width: 100%; height: 100%; left: 0; bottom: 0;
+    content: ''; width: 100%; height: 100%; left: 0; top: 0;
     position: absolute; z-index: 1;
     background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
 }
 #wrap main .collection_wrap .contents_box .collection img {
-    width: 100%; transition: transform 0.5s ease;
+    width: 100%; transition: transform 0.5s ease; display: block;
 }
 #wrap main .collection_wrap .contents_box .collection:hover img {transform: scale(1.05);}
 #wrap main .collection_wrap .contents_box .collection .text_box {
     position: absolute; z-index: 2; left: 30px; bottom: 50px;
 }
-#wrap main .collection_wrap .contents_box .collection .text_box h2 {}
-#wrap main .collection_wrap .contents_box .collection .text_box p {}
 #wrap main .collection_wrap .contents_box .collection .text_box h2 {
     font-size: 1.63rem; font-weight: 500; margin-bottom: 20px; color: #fff;
 }
