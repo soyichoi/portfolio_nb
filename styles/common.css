@@ -1,10 +1,9 @@
 /* ====================================================================== 공통 디자인 */
 body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
+#wrap > * {min-width: 320px;}
 /* ======================================================================위로가기 버튼 */
-.to_top {
-    position: fixed; right: 80px; bottom: 50px; z-index: 999;
-}
-.to_top img {}
+.to_top {position: fixed; right: 80px; bottom: 50px; z-index: 999;}
+.to_top img {width: 100%;}
 /* ---------------------------------------------------------------------- 상품이미지 hover 효과 */
 #wrap main .img_link {
     display: block; overflow: hidden;
@@ -19,9 +18,7 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap main .img_link img {
     width: 100%; display: block; transition: all 0.3s ease-in-out;
 }
-#wrap main .img_link:hover img {
-    transform: scale(1.05);
-}
+#wrap main .img_link:hover img {transform: scale(1.05);}
 /* ---------------------------------------------------------------------- 타이틀 */
 #wrap .title_box h1 em {
     font-family: "Montserrat", sans-serif; font-size: 2.63rem; font-weight: 600;
@@ -45,16 +42,20 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap .product_box .name {font-size: 1.03rem; margin: 30px 0 20px 0; line-height: 1.5;}
 #wrap .product_box .price {font-size: 0.94rem; font-weight: 600; font-size: 0.94rem;}
 /*  ---------------------------------------------------------------------- 진행바 */
-#wrap main .swiper-pagination {
-    position: absolute; bottom: 0; left: 0; width: 100%; display: flex;
+#wrap main .pagi_scroll {
+    position: relative; height: 50px; margin-top: 30px;
 }
-#wrap main .swiper-pagination-current {margin-right: 3px;}
-#wrap main .swiper-pagination-total {margin-left: 3px;}
-#wrap main .swiper-scrollbar {
-    height: 2px; background: #eee;
-    position: absolute; bottom: 7px; left: 50px; width: calc(100% - 50px);
+#wrap main .pagi_scroll .swiper-pagination {
+    left: 0; top: 50%; transform: translateY(-50%); text-align: left;
 }
-#wrap main .swiper-scrollbar-drag {background: #000;}
+#wrap main .pagi_scroll .swiper-pagination-current { margin-right: 3px;}
+#wrap main .pagi_scroll .swiper-pagination-total {margin-left: 3px;}
+#wrap main .pagi_scroll .swiper-scrollbar {
+    right: 0; top: 50%; transform: translateY(-50%);
+    height: 2px; background: #eee; width: calc(100% - 50px);
+    margin-left: 50px;
+}
+#wrap main .pagi_scroll .swiper-scrollbar-drag {background: #000;}
 /* ======================================================================header */
 #wrap header {
     position: fixed; left: 0; top: 0; width: 100%; z-index: 999; background: #fff;
@@ -123,12 +124,15 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
     line-height: 1.5; font-size: 0.88rem; font-weight: 500; color: #777;
 }
 /* ======================================================================footer */
-/* ----------------------------------------------------------------------foot_left */
 #wrap footer {
-    background: #000; padding: 50px 0; display: flex; gap: 100px;
+    background: #000; padding: 50px 0; 
+    display: grid; grid-template-columns: repeat(340px, 480px, 380px); gap: 100px;
     justify-content: center;
+    grid-template-areas: 
+        'left center right';
 }
-#wrap footer .foot_left {}
+/* ----------------------------------------------------------------------foot_left */
+#wrap footer .foot_left {grid-area: left;}
 #wrap footer .foot_left .foot_logo {width: 120px;}
 #wrap footer .foot_left .foot_logo img {width: 100%;}
 #wrap footer .foot_left .foot_cs {margin: 20px 0 40px;}
@@ -143,7 +147,9 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 }
 #wrap footer .foot_left .foot_policy .copyright {color: #bdbdbd; font-size: 0.88rem; line-height: 2;}
 /* ----------------------------------------------------------------------foot_center */
-#wrap footer .foot_center {display: flex; flex-flow: column nowrap; justify-content: space-between;}
+#wrap footer .foot_center {
+    grid-area: center; display: flex; flex-flow: column nowrap; justify-content: space-between;
+}
 #wrap footer .foot_center .foot_menu {display: flex; gap: 50px;}
 #wrap footer .foot_center .foot_menu dl {}
 #wrap footer .foot_center .foot_menu dl dt {
@@ -157,9 +163,9 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap footer .foot_center .sns > a {display: block; width: 38px;}
 #wrap footer .foot_center .sns > a img {width: 100%;}
 /* ----------------------------------------------------------------------foot_right */
-#wrap footer .foot_right {display: flex; flex-flow: column nowrap; justify-content: space-between;}
+#wrap footer .foot_right {grid-area: right; display: flex; flex-flow: column nowrap; justify-content: space-between;}
 #wrap footer .foot_right * p {color: #bdbdbd; line-height: 2; font-size: 0.88rem;}
-#wrap footer .foot_right .foot_company {}
+#wrap footer .foot_right .foot_company {grid-area: company;}
 #wrap footer .foot_right .foot_company .company_row {display: flex;}
 #wrap footer .foot_right .foot_company .company_row > p {}
 #wrap footer .foot_right .foot_company .company_row p:first-child::after {
@@ -168,8 +174,8 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 }
 #wrap footer .foot_right .foot_company .company_row > p a {color: #fff; font-weight: 600; margin-left: 6px;}
 #wrap footer .foot_right .foot_company .company_row address {color: #bdbdbd; line-height: 2; font-size: 0.88rem;}
-#wrap footer .foot_right .foot_cert {display: flex; gap: 14px;}
-#wrap footer .foot_right .foot_cert .cert_img {display: flex; gap: 14px;}
-#wrap footer .foot_right .foot_cert .cert_img img {width: 100%;}
+#wrap footer .foot_right .foot_cert {grid-area: cert; display: flex; gap: 14px; align-items: center;}
+#wrap footer .foot_right .foot_cert .cert_img {gap: 14px; display: flex;}
+#wrap footer .foot_right .foot_cert .cert_img img {width: 60px;}
 #wrap footer .foot_right .foot_cert .cert_text {}
 #wrap footer .foot_right .foot_cert .cert_text > p {color: #bdbdbd;}

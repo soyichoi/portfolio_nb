@@ -29,7 +29,7 @@
     /* ----------------------------------------------- 3. 롱슬리브 */
     #wrap main .sleeve_wrap {flex-flow: column nowrap;}
     #wrap main .sleeve_wrap .look_swiper {width: 100%; gap: 0; margin: 0 40px;}
-    #wrap main .sleeve_wrap .contents_wrap {width: 100%; gap: 30px;  margin: 0 40px;}
+    #wrap main .sleeve_wrap .contents_wrap {width: 100%; gap: 30px; margin: 0 40px;}
     #wrap main .sleeve_wrap .contents_wrap .title_box span {display: none;}
     #wrap main .sleeve_wrap .contents_wrap .title_box .more_view {display: none;}
     /* ----------------------------------------------- 4. 이벤트 배너 */
@@ -51,6 +51,16 @@
     #wrap main .collection_wrap {padding: 0 40px 80px;}
     #wrap main .collection_wrap .contents_box .collection:nth-child(3) {display: none;}
     /* ----------------------------------------------- footer */
+    #wrap footer {
+        grid-template-columns: repeat(380px, 480px); gap: 30px;
+        grid-template-areas: 
+            'left center'
+            'company cert';
+        padding: 50px 40px;
+    }
+    #wrap footer .foot_right {display: contents;}/* 빈영역숨기기 */
+    #wrap footer .foot_center .sns {justify-content: end;}
+    #wrap footer .foot_right .foot_cert {justify-content: end;}
 }
 
 /* ===================================================== 모바일 (~440px) */
@@ -62,7 +72,8 @@
     #wrap main .tab_menu > a {font-size: 0.81rem;}/* 탭메뉴 */
     #wrap main .tab_more > a img {width: 24px;}/* +버튼 */
     #wrap .product_box .name {margin: 20px 0 10px 0;}/* 제품명 */
-    #wrap main .swiper-pagination-current,/* 페이지 현재-총 */
+    #wrap main .pagi_scroll {margin-right: 20px;}/* 페이지 - 스크롤 */
+    #wrap main .swiper-pagination-current,
     #wrap main .swiper-pagination-total {font-size: 0.88rem;}
     #wrap .product_box .name {font-size: 0.94rem;}/* 제품명 */
     #wrap .product_box .price {font-size: 0.88rem;}/* 가격 */
@@ -135,4 +146,16 @@
     #wrap main .collection_wrap .contents_box .collection .text_box h2 {font-size: 1.38rem;}
     #wrap main .collection_wrap .contents_box .collection .text_box p {font-size: 0.94rem;}
     /* ----------------------------------------------- footer */
+    #wrap footer {
+        grid-template-columns: 1fr; gap: 30px;
+        grid-template-areas: 
+        'left'
+        'center';
+        padding: 50px 20px;
+    }
+    #wrap footer .foot_left .foot_logo {width: 100px;}
+    #wrap footer .foot_left .foot_cs {margin: 20px 0;}
+    #wrap footer .foot_center .foot_menu {display: none;}
+    #wrap footer .foot_center .sns {justify-content: start;}
+    #wrap footer .foot_right {display: none;}
 }

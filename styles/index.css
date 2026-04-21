@@ -67,8 +67,7 @@
 /* ----------------------------------------------------------------------2. 베스트셀러(swiper) */
 #wrap main .best_wrap .contents .tab_contents {}
 #wrap main .best_wrap .contents .tab_contents .swiper {
-    display: none; max-width: 1760px;
-    position: relative; padding-bottom: 60px;
+    display: none; max-width: 1760px; position: relative;
 }
 #wrap main .best_wrap .contents .tab_contents .swiper.active {display: block;}
 #wrap main .best_wrap .contents .tab_contents .swiper .swiper-wrapper {}
@@ -129,7 +128,7 @@
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_title .tab_more > a img {}
 /* ----------------------------------------------------------------------3. 롱 슬리브(상품 swiper) */
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents {}
-#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper {width: 100%; padding-bottom: 50px;}
+#wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper {width: 100%;}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper {}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .sleeve_wrap .contents_wrap .contents .tab_contents .stripe_swiper .swiper-wrapper .swiper-slide > a {}
@@ -159,7 +158,7 @@
 #wrap main .setup_wrap .title_more .title_box .tab_more {}
 #wrap main .setup_wrap .title_more .title_box .tab_more a {}
 #wrap main .setup_wrap .title_more .title_box .tab_more a img {}
-#wrap main .setup_wrap .setup_swiper {padding-bottom: 45px;}
+#wrap main .setup_wrap .setup_swiper {}
 #wrap main .setup_wrap .setup_swiper .swiper-wrapper {}
 #wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .setup_wrap .setup_swiper .swiper-wrapper .swiper-slide .img_link {}
@@ -215,7 +214,7 @@
 #wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more a {}
 #wrap main .pants_wrap .pants_contents .contents .tab_title .tab_more a img {}
 #wrap main .pants_wrap .pants_contents .contents .tab_contents {}
-#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper {padding-bottom: 50px;}
+#wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper {}
 #wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper {}
 #wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .pants_wrap .pants_contents .contents .tab_contents .denim_swiper .swiper-wrapper .swiper-slide a {}
@@ -239,7 +238,7 @@
 #wrap main .run_wrap .tab_more a img {}
 #wrap main .run_wrap .run_img {display: block;}
 #wrap main .run_wrap .run_img img {width: 100%;}
-#wrap main .run_wrap .run_swiper {margin-top: 30px; padding-bottom: 60px;}
+#wrap main .run_wrap .run_swiper {margin-top: 30px;}
 #wrap main .run_wrap .run_swiper .swiper-wrapper {}
 #wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide {}
 #wrap main .run_wrap .run_swiper .swiper-wrapper .swiper-slide a {}
