@@ -27,7 +27,7 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
     line-height: 150%; color: #777; font-size: 1.13rem;
 }
 /* ---------------------------------------------------------------------- 탭메뉴 버튼 */
-#wrap main .tab_menu {display: flex; gap: 8px; align-items: center;}
+#wrap main .tab_menu {display: flex; gap: 8px; align-items: center; overflow: hidden;}
 #wrap main .tab_menu > a {
     background-color: #eee; color: #777; padding: 10px 18px; border-radius: 30px;
     font-weight: 500; font-size: 0.94rem; text-wrap: nowrap;
