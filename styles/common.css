@@ -1,5 +1,10 @@
 /* ====================================================================== 공통 디자인 */
 body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
+/* ======================================================================위로가기 버튼 */
+.to_top {
+    position: fixed; right: 80px; bottom: 50px; z-index: 999;
+}
+.to_top img {}
 /* ---------------------------------------------------------------------- 상품이미지 hover 효과 */
 #wrap main .img_link {
     display: block; overflow: hidden;
@@ -100,11 +105,6 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .search_mypage .search img {}
 #wrap header nav .search_mypage .mypage {}
 #wrap header nav .search_mypage .mypage img {}
-/* ======================================================================위로가기 버튼 */
-#wrap main .to_top {
-    position: fixed; right: 80px; bottom: 50px; z-index: 999;
-}
-#wrap main .to_top img {}
 /* ======================================================================CTA 버튼 */
 #wrap main .cta_wrap {padding-bottom: 100px;}
 #wrap main .cta_wrap .cta_list {

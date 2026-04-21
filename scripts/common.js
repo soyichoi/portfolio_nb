@@ -1,3 +1,12 @@
+//위로 script
+const fixedTop = document.querySelector('.to_top');
+//console.log(fixedTop);
+fixedTop.style.display = 'none';
+window.addEventListener('scroll',function(){
+    if(this.window.scrollY >= 1000) fixedTop.style.display = 'block';
+    else fixedTop.style.display = 'none';
+})
+
 //header
 //띠 배너
 const noticeBnr = document.querySelector('.notice_bnr');

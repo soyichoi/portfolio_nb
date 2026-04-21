@@ -1,6 +1,5 @@
 /* 반응형 responsive */
 /* desktop(1025px~) -> tablet(~1024px) -> mobile(~440px) */
-#wrap > * {min-width: 440px;}
 /* ===================================================== 태블릿 (~1024px) */
 @media screen and (max-width: 1024px) {
     /* ============================================== 공통디자인 */
@@ -51,6 +50,7 @@
 /* ===================================================== 모바일 (~440px) */
 @media screen and (max-width: 440px) {
     /* ============================================== 공통디자인 */
+    .to_top {right: 30px; bottom: 30px;}
     #wrap .title_box h1 em {font-size: 1.88rem;}/* 타이틀 */
     #wrap .title_box span {display: none;}/* 타이틀-설명 */
     #wrap main .tab_menu > a {font-size: 0.81rem;}/* 탭메뉴 */
