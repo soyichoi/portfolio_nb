@@ -32,9 +32,18 @@ const heroSlide = new Swiper(heroBnr,{
 })
 
 //========================================================2. 베스트셀러
-const best = document.querySelectorAll('.best_wrap .swiper');
-const best_title = document.querySelectorAll('.best_wrap .tab_menu a');
+const best = document.querySelectorAll('.best_wrap .tab_contents .swiper');
+const best_title = document.querySelectorAll('.best_wrap .best_tab_menu a');
 //console.log(best, best_title);
+
+//베스트셀러 탭메뉴 스와이퍼
+const tabMenu = document.querySelector('.best_wrap .tab_swiper');
+//console.log(tabMenu);
+const tabMenuSwiper = new Swiper(tabMenu,{
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    freeMode: true,
+})
 
 //베스트셀러 swiper
 const totalSwiper = new Swiper(best[0], {
@@ -51,10 +60,10 @@ const totalSwiper = new Swiper(best[0], {
         draggable: true,
     },
     breakpoints: {
-        //모바일 (~440)
+        //모바일 (~700)
         0: {slidesPerView: 1.5,},
         //태블릿 (~1024)
-        440: {slidesPerView:3,},
+        700: {slidesPerView:3,},
         //PC
         1025: {slidesPerView:5,}
     }
@@ -145,10 +154,10 @@ const stripeSwiper = new Swiper(sleeveList[0],{
         draggable: true,
     },
     breakpoints: {
-    //모바일 (~440)
+    //모바일 (~700)
     0: {slidesPerView: 1.5,},
     //태블릿 (~1024)
-    440: {slidesPerView:3,},
+    700: {slidesPerView:3,},
     //PC
     1025: {slidesPerView:3,}
     }
@@ -170,10 +179,10 @@ const setupSwiper = new Swiper(setup, {
         draggable: true,
     },
     breakpoints: {
-    //모바일 (~440)
+    //모바일 (~700)
     0: {slidesPerView: 1.2,},
     //태블릿 (~1024)
-    440: {slidesPerView:2,},
+    700: {slidesPerView:2,},
     //PC
     1025: {slidesPerView:3,}
     }
@@ -209,10 +218,10 @@ const denimSwiper = new Swiper(pantsList[0],{
         draggable: true,
     },
     breakpoints: {
-    //모바일 (~440)
+    //모바일 (~700)
     0: {slidesPerView: 1.2,},
     //태블릿 (~1024)
-    440: {slidesPerView:3,},
+    700: {slidesPerView:3,},
     //PC
     1025: {slidesPerView:3,}
     }
@@ -220,7 +229,7 @@ const denimSwiper = new Swiper(pantsList[0],{
 //---------------------------------------------------------- 타이틀 clone
 const pantsTitle = document.querySelector('.pants_wrap .title_box');
 const pantsClone = document.querySelector('.pants_wrap .title_clone');
-console.log(pantsTitle, pantsClone);
+//console.log(pantsTitle, pantsClone);
 
 const pantsTitleClone = pantsTitle.cloneNode(true);
 pantsClone.appendChild(pantsTitleClone);
@@ -242,10 +251,10 @@ const runSwiper = new Swiper(running, {
         draggable: true,
     },
     breakpoints: {
-    //모바일 (~440)
+    //모바일 (~700)
     0: {slidesPerView: 1.5,},
     //태블릿 (~1024)
-    440: {slidesPerView:3,},
+    700: {slidesPerView:3,},
     //PC
     1025: {slidesPerView:5,},
     },

@@ -2,8 +2,8 @@
 body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap > * {min-width: 320px;}
 /* ======================================================================위로가기 버튼 */
-.to_top {position: fixed; right: 80px; bottom: 50px; z-index: 999;}
-.to_top img {width: 100%;}
+#wrap main .to_top {position: fixed; right: 80px; bottom: 50px; z-index: 999;}
+#wrap main .to_top img {width: 100%;}
 /* ---------------------------------------------------------------------- 상품이미지 hover 효과 */
 #wrap main .img_link {
     display: block; overflow: hidden;
@@ -84,8 +84,6 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
     display: flex; justify-content: space-between; align-items: center;
     padding: 0 80px; height: 71px;
 }
-#wrap header nav .menu_btn {display: none;}
-#wrap header nav .menu_btn img {}
 #wrap header nav h1 {}
 #wrap header nav h1 .logo {width: 102px; display: block;}
 #wrap header nav h1 .logo img {width: 100%;}
@@ -106,6 +104,63 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .search_mypage .search img {}
 #wrap header nav .search_mypage .mypage {}
 #wrap header nav .search_mypage .mypage img {}
+/* ======================================================================사이드메뉴 */
+#wrap header nav .menu_btn {}
+#wrap header nav .menu_btn img {}
+#wrap header nav .side_menu_bg {
+    display: none;
+    position: fixed; left: 0; top: 0; z-index: 999;
+    background: rgba(0, 0, 0, 0.25); width: 100%; height: 100vh;
+}
+#wrap header nav .side_menu_bg .side_menu_inner {
+    background: #fff; height: 100vh;
+    min-width: 320px; max-width: 650px; padding: 55px;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_top {
+    display: flex; justify-content: space-between;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_top .side_close {}
+#wrap header nav .side_menu_bg .side_menu_inner .side_top .side_close img {width: 100%;}
+#wrap header nav .side_menu_bg .side_menu_inner .side_top h1 {}
+#wrap header nav .side_menu_bg .side_menu_inner .side_top h1 img {width: 84px;}
+#wrap header nav .side_menu_bg .side_menu_inner .user {display: inline-block; margin: 30px 0;}
+#wrap header nav .side_menu_bg .side_menu_inner .user a {display: flex; gap: 12px; align-items: center;} 
+#wrap header nav .side_menu_bg .side_menu_inner .user a img {width: 20px;}
+#wrap header nav .side_menu_bg .side_menu_inner .user a span {font-size: 0.88rem;}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb {position: relative; padding: 30px 0;}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb::before {
+    content: ''; width: 100%; height: 1px; top: 0; left: 0;
+    background: #bdbdbd; position: absolute;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb::after {
+    content: ''; width: 100%; height: 1px; bottom: 0; left: 0;
+    background: #bdbdbd; position: absolute;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li {}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li > a {
+    font-size: 1.25rem; font-weight: 600; padding: 15px 0; display: block;
+    position: relative;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li > a.has_sub::after {
+    content: ''; width: 24px; height: 24px; background-image: url(../images/common/arrow_btm.svg);
+    right: 0; top: 50%; transform: translateY(-50%);
+    position: absolute; background-repeat: no-repeat; background-position: center;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li .side_lnb {
+    /* 아래로 열리는 애니메이션 준비 */
+    height: 0; overflow: hidden;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li .side_lnb li {
+    margin: 0 0 20px 15px;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li .side_lnb li:first-child {padding-top: 20px;}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li .side_lnb li:last-child {}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li .side_lnb li > a {
+    font-size: 1rem; font-weight: 500; padding: 5px;
+}
+#wrap header nav .side_menu_bg .side_menu_inner .side_event_bnr {display: block; margin-top: 30px;}
+#wrap header nav .side_menu_bg .side_menu_inner .side_event_bnr img {width: 100%;}
+
 /* ======================================================================CTA 버튼 */
 #wrap main .cta_wrap {padding-bottom: 100px;}
 #wrap main .cta_wrap .cta_list {
