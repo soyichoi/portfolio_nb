@@ -67,7 +67,12 @@
     }
     #wrap footer .foot_right {display: contents;}/* 빈영역숨기기 */
     #wrap footer .foot_center .sns {justify-content: end;}
-    #wrap footer .foot_right .foot_cert {justify-content: end;}
+    #wrap footer .foot_right .foot_cert {justify-content: end; margin-bottom: 80px;}
+
+    /* ============================================== 서브페이지 (product_list) */
+    #wrap main .product_list_wrap .product_list {row-gap: 80px;}
+    #wrap main .product_list_wrap .product_list li {width: calc((100% - 40px) / 3); /* 3개 */}
+    #wrap main .page_wrap {margin-bottom: 100px;}
 }
 
 /* ===================================================== 모바일 (~440px) */
@@ -178,4 +183,7 @@
     /* ============================================== 사이드메뉴 */
     #wrap header nav .side_menu_bg .side_menu_inner {padding: 20px 30px;}
     #wrap header nav .side_menu_bg .side_menu_inner .side_top .side_close img {width: 20px;}
+
+    /* ============================================== 서브페이지 (product_list) */
+    #wrap main .product_list_wrap .product_list li {width: calc((100% - 20px) / 2); /* 2개 */}
 }

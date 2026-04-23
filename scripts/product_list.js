@@ -1,6 +1,6 @@
 // 3. 페이지 클릭 활성화/비활성화 js
 const pageNumber = document.querySelectorAll('.page_wrap .page a');
-console.log(pageNumber);
+//console.log(pageNumber);
 
 for (let i of pageNumber) {
     i.addEventListener('click',function(e){

@@ -152,14 +152,15 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li {}
 #wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li > a {
     font-size: 1.25rem; font-weight: 600; padding: 15px 0; display: block;
-    position: relative;
+    position: relative; /* 화살표 위치 부모 */
 }
-#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li > a.has_sub::after {
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb .has_sub {}
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb .has_sub > a::after {
     content: ''; width: 24px; height: 24px; background-image: url(../images/common/arrow_btm.svg);
     right: 0; top: 50%; transform: translateY(-50%);
     position: absolute; background-repeat: no-repeat; background-position: center;
 }
-#wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li > a.has_sub.open::after {
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb .has_sub.open > a::after {
     transform: translateY(-50%) rotate(-90deg);
 }
 

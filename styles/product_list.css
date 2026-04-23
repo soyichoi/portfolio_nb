@@ -32,10 +32,10 @@
 /* ======================================================================2. 상품 리스트 */
 #wrap main .product_list_wrap {}
 #wrap main .product_list_wrap .product_list {
-    display: flex; flex-flow: row nowrap; gap: 20px; 
+    display: flex; flex-flow: wrap; gap: 20px; row-gap: 100px;
     margin-bottom: 100px;
 }
-#wrap main .product_list_wrap .product_list li {}
+#wrap main .product_list_wrap .product_list li {width: calc((100% - 60px) / 4); /* 4개 */}
 #wrap main .product_list_wrap .product_list li .img_link {}
 #wrap main .product_list_wrap .product_list li .img_link img {width: 100%;}
 #wrap main .product_list_wrap .product_list li .product_box {}

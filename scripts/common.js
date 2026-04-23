@@ -51,7 +51,7 @@ sideMenuClose.addEventListener('click',function(e){
         i.style.height = '0px';
     }
     for(let i of sideGnb){ //화살표 애니메이션 초기화
-        i.children[0].classList.remove('open');
+        i.parentNode.classList.remove('open');
     }
 })
 //밖 영역 클릭 -> 닫기
@@ -62,48 +62,33 @@ sideMenuOutside.addEventListener('click',function(e){
         i.style.height = '0px';
     }
     for(let i of sideGnb){ //화살표 애니메이션 초기화
-        i.children[0].classList.remove('open');
+        i.parentNode.classList.remove('open');
     }
 })
 
 //사이드메뉴의 gnb 클릭시 lnb 보이기
-const sideGnb = document.querySelectorAll('.side_gnb .has_sub');/* 의류,신발,용품 */
+const sideGnb = document.querySelectorAll('.side_gnb .has_sub > a');/* 의류,신발,용품(제목) */
 const sideLnb = document.querySelectorAll('.side_lnb');
-console.log(sideGnb, sideLnb);
+
+//console.log(sideGnb, sideLnb);
 
 for(let i of sideLnb){i.style.transition = 'height 0.3s';}
 
-
-
 for(let i of sideGnb){
-    let gnbShowHide = false;//초기값(숨김)
-
+    let gnbShowHide = false; //초기값(숨김)
     i.addEventListener('click', function(e){
         e.preventDefault();
         //console.log('클릭확인');
-        //console.log(i.children[1].scrollHeight);
+        //console.log(i.parentNode.children[1].scrollHeight);
+        //a의 부모의 첫번째 자식
         if ( gnbShowHide == false ) {
-            i.children[1].style.height = `${i.children[1].scrollHeight}px`;
+            i.parentNode.children[1].style.height = `${i.parentNode.children[1].scrollHeight}px`;
+            i.parentNode.classList.add('open');
+            
         } else {
-            i.children[1].style.height = 0;
+            i.parentNode.children[1].style.height = 0;
+            i.parentNode.classList.remove('open');
         }
         gnbShowHide = !gnbShowHide;
     })
 }
-
-//function sideLnbHide(){
-//    for(let i of sideLnb) i.style.height = 0
-//}
-
-        // const arrow = i.children[0]; //베스트,의류,신발,용품,이벤트
-        
-        // if(!i.children[0].classList.contains('has_sub')) return; //has_sub 아닌 경우 링크 이동
-        // e.preventDefault(); //링크막기
-        
-        // if(lnb.style.height == '0px') { //만약 닫혀있으면 lnb 열기
-        //     lnb.style.height = `${lnb.scrollHeight}px`;
-        //     arrow.classList.add('open');
-        // } else { //아니면 lnb 닫기
-        //     lnb.style.height = '0px';
-        //     arrow.classList.remove('open');
-        // }
