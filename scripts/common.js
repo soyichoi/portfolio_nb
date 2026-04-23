@@ -67,24 +67,33 @@ sideMenuOutside.addEventListener('click',function(e){
 })
 
 //사이드메뉴의 gnb 클릭시 lnb 보이기
-const sideGnb = document.querySelectorAll('.side_gnb > li');
+const sideGnb = document.querySelectorAll('.side_gnb .has_sub');/* 의류,신발,용품 */
 const sideLnb = document.querySelectorAll('.side_lnb');
-//console.log(sideGnb, sideLnb);
+console.log(sideGnb, sideLnb);
 
 for(let i of sideLnb){i.style.transition = 'height 0.3s';}
 
+
+
 for(let i of sideGnb){
-    i.addEventListener('click', function(){
-        console.log('클릭확인');
-        sideLnbHide();
-        console.log(i.children[1].scrollHeight); //i.children[1] -> lnb
-        i.children[1].style = `${i.children[1].scrollHeight}px`;
+    let gnbShowHide = false;//초기값(숨김)
+
+    i.addEventListener('click', function(e){
+        e.preventDefault();
+        //console.log('클릭확인');
+        //console.log(i.children[1].scrollHeight);
+        if ( gnbShowHide == false ) {
+            i.children[1].style.height = `${i.children[1].scrollHeight}px`;
+        } else {
+            i.children[1].style.height = 0;
+        }
+        gnbShowHide = !gnbShowHide;
     })
 }
 
-function sideLnbHide(){
-    for(let i of sideLnb) i.style.height = 0
-}
+//function sideLnbHide(){
+//    for(let i of sideLnb) i.style.height = 0
+//}
 
         // const arrow = i.children[0]; //베스트,의류,신발,용품,이벤트
         
