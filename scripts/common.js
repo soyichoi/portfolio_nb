@@ -30,24 +30,42 @@ toTop.addEventListener('click',function(e){
     window.scrollTo(0,0);
 })
 
-//전체메뉴 클릭 시 전체메뉴 나타나기
+//사이드메뉴
+//햄버거 메뉴 클릭 시 사이드메뉴 나타나기
 const sideMenuOpen = document.querySelector('.menu_btn');
 const sideMenuBg = document.querySelector('.side_menu_bg');
 const sideMenuClose = document.querySelector('.side_close');
-//console.log(sideMenuOpen,sideMenuBg,sideMenuClose);
+const sideMenuOutside = document.querySelector('.side_menu_outside');
+//console.log(sideMenuOpen,sideMenuBg,sideMenuClose,sideMenuOutside);
 
+//햄버거 메뉴 클릭->열기
 sideMenuOpen.addEventListener('click',function(e){
     e.preventDefault();
-    sideMenuBgSH('block');
+    sideMenuBg.classList.add('active');
 })
+//햄버거 메뉴 클릭->닫기
 sideMenuClose.addEventListener('click',function(e){
     e.preventDefault();
-    sideMenuBgSH('none');
+    sideMenuBg.classList.remove('active');
+    for(let i of sideLnb){ //열린 lnb 초기화
+        i.style.height = '0px';
+    }
+    for(let i of sideGnb){ //화살표 애니메이션 초기화
+        i.children[0].classList.remove('open');
+    }
+})
+//밖 영역 클릭 -> 닫기
+sideMenuOutside.addEventListener('click',function(e){
+    e.preventDefault();
+    sideMenuBg.classList.remove('active');
+    for(let i of sideLnb){ //열린 lnb 초기화
+        i.style.height = '0px';
+    }
+    for(let i of sideGnb){ //화살표 애니메이션 초기화
+        i.children[0].classList.remove('open');
+    }
 })
 
-function sideMenuBgSH(status){return sideMenuBg.style.display = status;}
-
-//사이드메뉴
 //사이드메뉴의 gnb 클릭시 lnb 보이기
 const sideGnb = document.querySelectorAll('.side_gnb > li');
 const sideLnb = document.querySelectorAll('.side_lnb');
@@ -56,17 +74,20 @@ const sideLnb = document.querySelectorAll('.side_lnb');
 for(let i of sideGnb){
     i.addEventListener('click', function(e){
         //console.log('클릭확인');
-        //has_sub 아닌 경우 링크 이동
-        if(!i.children[0].classList.contains('has_sub')) return;
-        e.preventDefault();
-        sideLnbHide();
-        //console.log(i.children[1].scrollHeight);
-        i.children[1].style.height = `${i.children[1].scrollHeight}px`;
+        const lnb = i.children[1];
+        const arrow = i.children[0]; //베스트,의류,신발,용품,이벤트
+        
+        if(!i.children[0].classList.contains('has_sub')) return; //has_sub 아닌 경우 링크 이동
+        e.preventDefault(); //링크막기
+        
+        if(lnb.style.height == '0px') { //만약 닫혀있으면 lnb 열기
+            lnb.style.height = `${lnb.scrollHeight}px`;
+            arrow.classList.add('open');
+        } else { //아니면 lnb 닫기
+            lnb.style.height = '0px';
+            arrow.classList.remove('open');
+        }
     })
 }
 
 for(let i of sideLnb){i.style.transition = 'height 0.3s';}
-
-function sideLnbHide(){
-    for(let i of sideLnb) i.style.height = 0
-}

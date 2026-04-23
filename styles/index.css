@@ -73,13 +73,6 @@
 #wrap main .best_wrap .contents .tab_title .tab_more > a {}
 #wrap main .best_wrap .contents .tab_title .tab_more > a img {width:100%;}
 #wrap main .best_wrap .contents .tab_title .tab_more > a:hover img {}
-/* ---------------------------------------------------------------------- 탭메뉴 버튼 */
-#wrap main .tab_menu > a {
-    
-}
-#wrap main .tab_menu > a.active {
-    
-}
 /* ----------------------------------------------------------------------2. 베스트셀러(swiper) */
 #wrap main .best_wrap .contents .tab_contents {}
 #wrap main .best_wrap .contents .tab_contents .swiper {

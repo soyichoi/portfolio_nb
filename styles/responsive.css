@@ -12,6 +12,7 @@
     #wrap main .cta_wrap {padding-bottom: 80px;}/* CTA */
     #wrap main .cta_wrap .cta_list {gap: 60px;}
     #wrap main .cta_wrap .cta_list .cta_item a h1 {font-size: 1.13rem;}
+    #wrap main .cta_wrap .cta_list .cta_item p {font-size: 0.75rem;}
     /* ----------------------------------------------- header */
     #wrap header .notice_bnr .close_btn {right: 40px;}
     #wrap header nav {padding:0 40px; height: 52px;}
