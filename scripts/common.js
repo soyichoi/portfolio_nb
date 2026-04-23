@@ -71,23 +71,30 @@ const sideGnb = document.querySelectorAll('.side_gnb > li');
 const sideLnb = document.querySelectorAll('.side_lnb');
 //console.log(sideGnb, sideLnb);
 
+for(let i of sideLnb){i.style.transition = 'height 0.3s';}
+
 for(let i of sideGnb){
-    i.addEventListener('click', function(e){
-        //console.log('클릭확인');
-        const lnb = i.children[1];
-        const arrow = i.children[0]; //베스트,의류,신발,용품,이벤트
-        
-        if(!i.children[0].classList.contains('has_sub')) return; //has_sub 아닌 경우 링크 이동
-        e.preventDefault(); //링크막기
-        
-        if(lnb.style.height == '0px') { //만약 닫혀있으면 lnb 열기
-            lnb.style.height = `${lnb.scrollHeight}px`;
-            arrow.classList.add('open');
-        } else { //아니면 lnb 닫기
-            lnb.style.height = '0px';
-            arrow.classList.remove('open');
-        }
+    i.addEventListener('click', function(){
+        console.log('클릭확인');
+        sideLnbHide();
+        console.log(i.children[1].scrollHeight); //i.children[1] -> lnb
+        i.children[1].style = `${i.children[1].scrollHeight}px`;
     })
 }
 
-for(let i of sideLnb){i.style.transition = 'height 0.3s';}
+function sideLnbHide(){
+    for(let i of sideLnb) i.style.height = 0
+}
+
+        // const arrow = i.children[0]; //베스트,의류,신발,용품,이벤트
+        
+        // if(!i.children[0].classList.contains('has_sub')) return; //has_sub 아닌 경우 링크 이동
+        // e.preventDefault(); //링크막기
+        
+        // if(lnb.style.height == '0px') { //만약 닫혀있으면 lnb 열기
+        //     lnb.style.height = `${lnb.scrollHeight}px`;
+        //     arrow.classList.add('open');
+        // } else { //아니면 lnb 닫기
+        //     lnb.style.height = '0px';
+        //     arrow.classList.remove('open');
+        // }
