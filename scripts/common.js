@@ -36,17 +36,21 @@ const sideMenuOpen = document.querySelector('.menu_btn');
 const sideMenuBg = document.querySelector('.side_menu_bg');
 const sideMenuClose = document.querySelector('.side_close');
 const sideMenuOutside = document.querySelector('.side_menu_outside');
-//console.log(sideMenuOpen,sideMenuBg,sideMenuClose,sideMenuOutside);
+const body = document.body;
+//console.log(sideMenuOpen,sideMenuBg,sideMenuClose,sideMenuOutside,body);
 
 //햄버거 메뉴 클릭->열기
 sideMenuOpen.addEventListener('click',function(e){
     e.preventDefault();
     sideMenuBg.classList.add('active');
+    body.classList.add('scroll_lock'); // 스크롤 막기
 })
 //햄버거 메뉴 클릭->닫기
 sideMenuClose.addEventListener('click',function(e){
     e.preventDefault();
     sideMenuBg.classList.remove('active');
+    body.classList.remove('scroll_lock'); // 스크롤 복구
+
     for(let i of sideLnb){ //열린 lnb 초기화
         i.style.height = '0px';
     }
@@ -58,6 +62,7 @@ sideMenuClose.addEventListener('click',function(e){
 sideMenuOutside.addEventListener('click',function(e){
     e.preventDefault();
     sideMenuBg.classList.remove('active');
+    body.classList.remove('scroll_lock'); // 스크롤 복구
     for(let i of sideLnb){ //열린 lnb 초기화
         i.style.height = '0px';
     }

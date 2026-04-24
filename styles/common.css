@@ -112,22 +112,23 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .search_mypage .mypage {}
 #wrap header nav .search_mypage .mypage img {}
 /* ====================================================================== 사이드메뉴 */
+body.scroll_lock {overflow: hidden;}/* 스크롤 막기함수 사용 준비 */
 #wrap header nav .menu_btn {}
 #wrap header nav .menu_btn img {}
 #wrap header nav .side_menu_bg {
-    display: none; 
+    display: none; /* 초기숨기기 */
     position: fixed; left: 0; top: 0; z-index: 999;
     background: rgba(0, 0, 0, 0.25); width: 100%;
-    height: 100vh; overflow-y: auto;/* 세로 스크롤 활성화-1 */
+    height: 100%;
 }
 #wrap header nav .side_menu_bg.active {display: flex;}
 #wrap header nav .side_menu_bg.active .side_menu_inner {
-    height: 100vh; overflow-y: auto; background: #fff;
+    height: 100%; overflow-y: auto;  /* 세로 스크롤 활성화 */ background: #fff;
 }
 #wrap header nav .side_menu_bg .side_menu_inner {
-    background: #fff; height: 100vh; padding: 55px;
-    min-width: 320px; max-width: 650px;
-    min-height: 700px;/* 이벤트 배너 이슈 */
+    background: #fff; height: 100%; padding: 55px; overflow-y: auto;
+    min-width: 320px; max-width: 650px; 
+    /* min-height: 700px;이벤트 배너 이슈 */
 }
 #wrap header nav .side_menu_bg .side_menu_inner .side_top {
     display: flex; justify-content: space-between;
@@ -141,11 +142,11 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .side_menu_bg .side_menu_inner .user a img {width: 20px;}
 #wrap header nav .side_menu_bg .side_menu_inner .user a span {font-size: 0.88rem;}
 #wrap header nav .side_menu_bg .side_menu_inner .side_gnb {position: relative; padding: 30px 0;}
-#wrap header nav .side_menu_bg .side_menu_inner .side_gnb::before {
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb::before {/* 구분선 */
     content: ''; width: 100%; height: 1px; top: 0; left: 0;
     background: #bdbdbd; position: absolute;
 }
-#wrap header nav .side_menu_bg .side_menu_inner .side_gnb::after {
+#wrap header nav .side_menu_bg .side_menu_inner .side_gnb::after {/* 구분선 */
     content: ''; width: 100%; height: 1px; bottom: 0; left: 0;
     background: #bdbdbd; position: absolute;
 }
@@ -176,7 +177,7 @@ body, html {scroll-behavior: smooth;}/* 스크롤 부드럽게 */
 #wrap header nav .side_menu_bg .side_menu_inner .side_gnb > li > .side_lnb li > a {
     font-size: 1rem; font-weight: 500; padding: 5px;
 }
-#wrap header nav .side_menu_bg .side_menu_inner .side_event_bnr {display: block; margin-top: 30px;}
+#wrap header nav .side_menu_bg .side_menu_inner .side_event_bnr {display: block; padding-top: 30px;}
 #wrap header nav .side_menu_bg .side_menu_inner .side_event_bnr img {width: 100%;}
 #wrap header nav .side_menu_bg .side_menu_outside {flex: 1;}
 /* ====================================================================== (고정) CTA 버튼 */
