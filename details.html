@@ -110,11 +110,11 @@
         <!-- main -->
         <main class="detail_pg">
             <!-- (고정) 위로가기 버튼 -->
-            <a href="#" class="to_top"><img src="./images/common/to_top.png" alt="위로"></a>
+            <a href="#" class="to_top to_top_detail"><img src="./images/common/to_top.png" alt="위로"></a>
+            <!-- 상단 영역 -->
             <div class="detail_top">
-                <!-- 왼쪽(스크롤 영역) -->
+                <!-- 1. 이미지 스와이퍼 -->
                 <section class="d_left">
-                    <!-- 1. 이미지 스와이퍼 -->
                     <div class="swiper detail_swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide slide1"><img src="./images/product/detail_01.jpg" alt=""></div>
@@ -123,26 +123,8 @@
                             <div class="swiper-slide slide4"><img src="./images/product/detail_04.jpg" alt=""></div>
                         </div>
                     </div>
-                    <!-- 2. 탭 메뉴 -->
-                    <div class="detail_tab">
-                        <a href="#" class="active">상품정보</a>
-                        <a href="#">리뷰</a>
-                        <a href="#">문의</a>
-                    </div>
-                    <!-- 3. 상세 콘텐츠 -->
-                    <div class="detail_body">
-                        <!-- 상세 이미지 -->
-                        <div class="detail_img"><img src="./images/product/detail_pg_01.jpg" alt=""></div>
-                        <!-- 아코디언 리스트 -->
-                        <ul class="info_list">
-                            <li><a href="#">상품 상세 정보</a></li>
-                            <li><a href="#">배송 및 반품</a></li>
-                            <li><a href="#">세탁 및 손질방법</a></li>
-                            <li><a href="#">A/S 안내</a></li>
-                        </ul>
-                    </div>
                 </section>
-                <!-- 오른쪽(고정 영역) -->
+                <!-- 2. 고정 sticky 영역 -->
                 <section class="d_right">
                     <div class="cate_top">
                         <span>KIDS</span>
@@ -196,6 +178,27 @@
                     <div class="cart_buy">
                         <a href="#" class="cart_btn">장바구니</a>
                         <a href="#" class="buy_btn">구매하기</a>
+                    </div>
+                </section>
+                <!-- 3. 하단 콘텐츠(탭+상세) -->
+                <section class="d_content">
+                    <!-- 탭 메뉴 -->
+                    <div class="detail_tab">
+                        <a href="#" class="active">상품정보</a>
+                        <a href="#">리뷰</a>
+                        <a href="#">문의</a>
+                    </div>
+                    <!-- 상세 콘텐츠(상세이미지+아코디언) -->
+                    <div class="detail_body">
+                        <!-- 상세 이미지 -->
+                        <div class="detail_img"><img src="./images/product/detail_pg_01.jpg" alt=""></div>
+                        <!-- 아코디언 리스트 -->
+                        <ul class="info_list">
+                            <li><a href="#">상품 상세 정보</a></li>
+                            <li><a href="#">배송 및 반품</a></li>
+                            <li><a href="#">세탁 및 손질방법</a></li>
+                            <li><a href="#">A/S 안내</a></li>
+                        </ul>
                     </div>
                 </section>
             </div>
